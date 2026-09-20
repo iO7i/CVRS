@@ -1,0 +1,40 @@
+include README.md LICENSE pyproject.toml
+recursive-include src/cvsubstrate/resources *.json *.md *.svg
+recursive-include schemas *.json
+recursive-include docs/public *.md *.svg
+recursive-include tests *.py
+recursive-include examples *.py *.json *.md
+
+include docs/HARDENING_071.md
+
+# Retain current README-linked guidance and release/attribution inputs in sdists.
+include NOTICE THIRD_PARTY_NOTICES.md ARCHITECTURE.md CHANGELOG.md RELEASE_NOTES.md
+include CONTRIBUTING.md GOVERNANCE.md SECURITY.md SUPPORT.md ROADMAP.md CODE_OF_CONDUCT.md
+include PUBLICATION.json PUBLIC_STATUS.json PUBLIC_RELEASE_POLICY.json
+include CITATION.cff .codemeta.json mkdocs.yml Makefile
+include docs/QUICKSTART_07.md docs/LIMITATIONS_07.md
+recursive-include tools *.py
+
+# Public qualification browser and evidence inputs required by distributed tests.
+include .gitattributes
+recursive-include docs/reference-cases *.md *.json
+recursive-include tests/compat *
+include qualification/FINAL_REPORT.md
+include qualification/h2/H2_REVIEW.md
+include qualification/h2/qualification-matrix.json
+recursive-include qualification/h2/browser *.html *.css *.js *.json
+include qualification/approvals/modern-foundation-models-2026-09-20.json
+include qualification/evidence/cvrs-sdk-paths-2026-09-20/report.json
+include qualification/evidence/dinov2-public-2026-09-20/final-disposition.json
+include qualification/evidence/grounding-dino-tiny-2026-09-20/final-disposition.json
+include qualification/evidence/mmdeploy131-rtmdet-ort-2026-09-20/final-disposition.json
+include qualification/evidence/mmdet2-retinanet-2026-09-20/qualification-attempt-02/report.json
+include qualification/evidence/mmdet3-rtmdet-tiny-2026-09-20/qualification-attempt-01/report.json
+include qualification/evidence/mmrotate034-oriented-rcnn-2026-09-20/final-disposition.json
+include qualification/evidence/mmseg122-fcn-ade20k-2026-09-20/final-disposition.json
+include qualification/evidence/sam21-public-2026-09-20/final-disposition.json
+include qualification/evidence/torchgeo-public-geotiff-2026-09-20/qualification-attempt-04/report.json
+include qualification/evidence/ultralytics-yolo26n-2026-09-20/final-disposition.json
+include qualification/h2/release-checks.json
+include qualification/h2/cleanroom-report.json
+include qualification/h2/pip-audit-release-final.json

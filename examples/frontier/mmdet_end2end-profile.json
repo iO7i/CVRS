@@ -1,0 +1,9 @@
+{
+  "family": "mmdet_end2end",
+  "class_count": 1,
+  "category_map": {
+    "0": 0
+  },
+  "input_width": 800,
+  "input_height": 800
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "cvrs.h2.release-checks.v1",
+  "status": "PASS_ALPHA_RELEASE_CANDIDATE_NOT_PUBLISHED",
+  "candidate_version": "0.7.1a3",
+  "tests": {"passed": 568, "skipped": 105, "failed": 0},
+  "ruff": "PASS",
+  "mypy_maintained_scope": {"status": "PASS", "source_files": 50},
+  "docs": {
+    "mkdocs_strict": "PASS",
+    "portal_pages": 28,
+    "local_links_checked": 176,
+    "broken": 0
+  },
+  "browser": {
+    "status": "PASS",
+    "interface": "research-observatory-v4",
+    "lanes": 20,
+    "history_state": "PASS",
+    "invalid_url_normalization": "PASS",
+    "native_table_semantics": "PASS",
+    "mobile_focus_and_inert": "PASS",
+    "public_evidence_targets_resolve": "PASS"
+  },
+  "cleanroom": {
+    "status": "PASS_CLEANROOM_WHEEL_ONLY",
+    "rq001_manifest_files_verified": 16,
+    "rq002_evidence_files_verified": 15,
+    "capsule_files_verified": 33,
+    "tamper_rejected": true,
+    "missing_evidence_rejected": true
+  },
+  "candidate": {
+    "status": "LOCAL_RELEASE_PREPARED",
+    "wheel_probe_sha256": "0771473f5b654ade4e6e661e197520caf00e6d8dab9b9cb187ed433a4619e393",
+    "wheel_install": "PASS",
+    "first_use_doctor": "PASS",
+    "first_use_init": "PASS",
+    "first_use_inspect": "PASS",
+    "sdist_required_tests": {"passed": 5, "failed": 0},
+    "sdist_to_wheel": "PASS"
+  },
+  "dependency_audit": {
+    "status": "PASS",
+    "known_vulnerabilities": 0,
+    "audited_environment": "final wheel plus documented adoption dependencies",
+    "note": "The unpublished CVRS distribution itself is not on PyPI and is reported by pip-audit as unauditable by index identity; audited third-party dependencies had no known vulnerabilities."
+  },
+  "public_source": {
+    "status": "WARN_REVIEWED",
+    "blocking_findings": 0,
+    "sensitive_findings": 0,
+    "reviewed_machine_path_warnings": 3
+  },
+  "publication_blockers": [],
+  "published": false
+}

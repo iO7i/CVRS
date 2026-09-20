@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"kind":{"default":"json","title":"Kind","type":"string"},"path":{"title":"Path","type":"string"},"required":{"default":true,"title":"Required","type":"boolean"},"schema_version":{"const":"1.0","default":"1.0","title":"Schema Version","type":"string"}},"required":["path"],"title":"CommandOutput","type":"object"}

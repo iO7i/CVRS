@@ -1,0 +1,9 @@
+{
+  "family": "ultralytics_raw",
+  "class_count": 1,
+  "category_map": {
+    "0": 0
+  },
+  "input_width": 640,
+  "input_height": 640
+}

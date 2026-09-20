@@ -1,0 +1,42 @@
+{
+  "schema": "cvrs.rq002.mmseg-fcn-ade20k-disposition.v1",
+  "status": "PASS_MMSEG_NATIVE_CVRS_AND_WRAPPED",
+  "source_report": "qualification-attempt-04/report.json",
+  "saved_native_conversion": "qualification-attempt-04/converted-native/receipt.json",
+  "native_inference": "PASS",
+  "transport_fidelity": "PASS_EXACT_ARRAY",
+  "conversion_fidelity": "PASS_3145728_LABEL_VALUES_PRESERVED",
+  "runtime_repeatability": "PASS_EXACT_ARRAY",
+  "evaluator_equivalence": "NOT_RUN_NO_REGISTERED_ADE20K_GROUND_TRUTH",
+  "native_output": {
+    "shape": [1536, 2048],
+    "dtype": "int32",
+    "pixels": 3145728,
+    "unique_labels": [1, 2, 4, 6, 11, 12, 20, 43, 87, 116, 127, 136],
+    "sha256": "4a3fab83829dca5b5efb3fe36c491b361e6a4e593430351b92a27ded15c7399b"
+  },
+  "canonical_output": {
+    "shape": [1536, 2048],
+    "dtype": "int64",
+    "values_equal_to_native": true,
+    "label_remaps": 0,
+    "resizes": 0,
+    "filters": 0
+  },
+  "preserved_failures": [
+    "attempt-01-asset-probe-failure.json",
+    "attempt-02-native-import-failure.json",
+    "attempt-03-native-import-failure.json"
+  ],
+  "controls": {
+    "training": false,
+    "optimizer_steps": 0,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "gpu_concurrency": 1
+  },
+  "limits": [
+    "One publicly exposed ADE20K repository example image; no bulk dataset access.",
+    "No ADE20K ground truth was downloaded, so evaluator equivalence and mIoU are not claimed."
+  ]
+}

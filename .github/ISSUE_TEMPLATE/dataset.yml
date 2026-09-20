@@ -1,0 +1,36 @@
+{
+  "name": "Dataset support",
+  "description": "Dataset support with reproducible context",
+  "body": [
+    {
+      "type": "textarea",
+      "id": "field-0",
+      "attributes": {
+        "label": "Dataset primary source"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-1",
+      "attributes": {
+        "label": "Annotation and split semantics"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-2",
+      "attributes": {
+        "label": "License and redistribution limits"
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

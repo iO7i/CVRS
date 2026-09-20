@@ -1,0 +1,43 @@
+{
+  "schema": "cvrs.rq002.mmrotate-oriented-rcnn-disposition.v1",
+  "status": "PASS_MMROTATE_NATIVE_CVRS_AND_WRAPPED",
+  "source_report": "qualification-attempt-04/report.json",
+  "saved_native_conversion": "qualification-attempt-04/converted-native/audit.json",
+  "native_inference": "PASS",
+  "transport_fidelity": "PASS",
+  "conversion_fidelity": "PASS_115_NATIVE_TO_115_CANONICAL",
+  "runtime_repeatability": "PASS_EXACT_LABEL_ORDER_BOXES_ATOL_1E_6_SCORES_ATOL_1E_7",
+  "evaluator_equivalence": "NOT_RUN_NO_GROUND_TRUTH_IN_OFFICIAL_DEMO_TILE",
+  "native_geometry": {
+    "detections": 115,
+    "vertices": 460,
+    "finite_vertices": 460,
+    "out_of_image_vertices_preserved": 8,
+    "maximum_bottom_excess_pixels": 25.32644630460095,
+    "clipped": 0,
+    "filtered": 0,
+    "normalized": 0
+  },
+  "execution": {
+    "device": "cpu",
+    "reason": "The pinned legacy CUDA stack failed inside native rotated NMS because CPU indices were applied to CUDA tensors. CPU execution used the same published model, config, weights, preprocessing and unmodified MMRotate source.",
+    "source_patch": "NONE",
+    "geometry_workaround": "NONE"
+  },
+  "preserved_failures": [
+    "attempt-01-pre-inference-failure.json",
+    "attempt-02-native-runtime-failure.json",
+    "attempt-03-builder-failure.json"
+  ],
+  "controls": {
+    "training": false,
+    "optimizer_steps": 0,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "gpu_concurrency": 0
+  },
+  "limits": [
+    "One official MMRotate DOTA demo tile; no DOTA metric or scientific-quality claim.",
+    "CVRS's oriented contract intentionally preserves and reports out-of-image polygon vertices."
+  ]
+}

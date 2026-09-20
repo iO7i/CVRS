@@ -1,0 +1,20 @@
+site_name: CV Research Substrate
+site_description: Native CV experiments and reproducible evidence
+site_dir: site
+docs_dir: docs/public
+use_directory_urls: false
+nav:
+  - Start: index.md
+  - Existing repositories: heritage.md
+  - Research: research.md
+  - Ecosystem bridges: bridges.md
+  - Native packs: packs.md
+  - Extend: extend.md
+  - Assets: assets.md
+  - HPC: hpc.md
+  - Migration: migration.md
+  - Security: security.md
+  - Publication: publication.md
+  - Type-checking scope: typing-scope.md
+  - Philosophy: philosophy.md
+  - Commands: commands.md

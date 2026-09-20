@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "id": "skysense-o",
+  "title": "SkySense-O: Towards Open-World Remote Sensing Interpretation with Vision-Centric Visual-Language Modeling",
+  "source_urls": [
+    "https://github.com/zqcrafts/SkySense-O"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/zqcrafts/SkySense-O",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "detectron2",
+    "clip",
+    "sam",
+    "pytorch"
+  ],
+  "tasks": [
+    "semantic_segmentation",
+    "grounded_detection"
+  ],
+  "assets": [
+    {
+      "id": "weights",
+      "kind": "weights",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "dataset",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    }
+  ],
+  "commands": {
+    "evaluate_candidate": [
+      "${python}",
+      "train_net.py",
+      "--eval-only"
+    ]
+  },
+  "integration_boundary": "whole_environment",
+  "status": "SOURCE_INSPECTED",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19",
+  "limitations": [
+    "The native project uses a Detectron2 fork; pin the fork and project separately.",
+    "The full project-specific arguments in run_train.sh must be reviewed. The candidate entry point is intentionally incomplete."
+  ]
+}

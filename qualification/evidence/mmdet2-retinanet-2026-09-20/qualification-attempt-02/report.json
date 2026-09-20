@@ -1,0 +1,322 @@
+{
+  "schema": "cvrs.rq002.mmdet2-retinanet.v1",
+  "status": "PASS_MMDET2_RETINANET_NATIVE_AND_CVRS",
+  "assets": {
+    "schema": "cvrs.rq002.model-lane-lock.v1",
+    "status": "FROZEN_BEFORE_INFERENCE",
+    "lane": "OML-LEGACY",
+    "model": "RetinaNet R50-FPN 1x COCO",
+    "mmdetection_version": "2.28.2",
+    "mmdetection_revision": "e9cae2d0787cd5c2fc6165a6061f92fa09e48fb1",
+    "source_url": "https://codeload.github.com/open-mmlab/mmdetection/tar.gz/e9cae2d0787cd5c2fc6165a6061f92fa09e48fb1",
+    "source_sha256": "7151d6df73a1db4940b1750ce20043c0e781e9129f2e8e2362999495d9a8a047",
+    "config_relative_path": "configs/retinanet/retinanet_r50_fpn_1x_coco.py",
+    "config_sha256": "2d05567c015e53c3bd8a657df76ad9d035c4f15d5087b73ad65410bcff93922c",
+    "checkpoint_url": "https://download.openmmlab.com/mmdetection/v2.0/retinanet/retinanet_r50_fpn_1x_coco/retinanet_r50_fpn_1x_coco_20200130-c2398f9e.pth",
+    "checkpoint_sha256": "c2398f9ec0843ed9a29e72d7a788741abbf2b4250e64f8f793092eaecaa0ab4f",
+    "checkpoint_bytes": 152149505,
+    "license": {
+      "identifier": "Apache-2.0",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmdetection/e9cae2d0787cd5c2fc6165a6061f92fa09e48fb1/LICENSE",
+      "sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1"
+    },
+    "environment": {
+      "python": "3.10",
+      "torch": "1.13.1+cu117",
+      "torchvision": "0.14.1+cu117",
+      "mmcv-full": "1.7.1",
+      "mmdet": "2.28.2",
+      "numpy": "1.23.5",
+      "opencv-python": "4.8.1.78",
+      "gpu": "T4"
+    },
+    "preprocessing": "Exact published MMDetection config; mmdet.apis.inference_detector; original image bytes",
+    "device": "cuda:0 / Tesla T4",
+    "inputs": [
+      {
+        "id": "139",
+        "file_name": "000000000139.jpg",
+        "sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d"
+      },
+      {
+        "id": "285",
+        "file_name": "000000000285.jpg",
+        "sha256": "f3a2974ce3686332609124c70e3e6a2e3aca43fccf1cd1bd7c5c03820977f57d"
+      }
+    ],
+    "comparison": {
+      "labels_and_order": "exact",
+      "boxes_atol": 1e-06,
+      "scores_atol": 1e-07,
+      "rtol": 0.0
+    },
+    "controls": {
+      "training": false,
+      "maximum_images": 2,
+      "gpu_concurrency": 1,
+      "storage": "ephemeral Modal container",
+      "protected_data_access": 0,
+      "sealed_test_access": 0,
+      "geometry_modification": "NONE"
+    }
+  },
+  "images": [
+    {
+      "id": "139",
+      "file_name": "000000000139.jpg",
+      "url": "http://images.cocodataset.org/val2017/000000000139.jpg",
+      "sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+      "width": 640,
+      "height": 426
+    },
+    {
+      "id": "285",
+      "file_name": "000000000285.jpg",
+      "url": "http://images.cocodataset.org/val2017/000000000285.jpg",
+      "sha256": "f3a2974ce3686332609124c70e3e6a2e3aca43fccf1cd1bd7c5c03820977f57d",
+      "width": 586,
+      "height": 640
+    }
+  ],
+  "native": {
+    "images": 2,
+    "detections": 106,
+    "sha256": "d5a689dc9326020db7a445f3efb1895f6735ad50fd07f724864f27656372d175",
+    "source": "REUSED_SAVED_NATIVE_ARTIFACT",
+    "geometry_audit": {
+      "detections": 106,
+      "finite": 106,
+      "ordered": 106,
+      "out_of_bounds": 0,
+      "out_of_bounds_fraction": 0.0,
+      "reason_counts": {
+        "x1<0": 0,
+        "y1<0": 0,
+        "x2>width": 0,
+        "y2>height": 0
+      },
+      "maximum_excess_pixels": {
+        "left": 0.0,
+        "top": 0.0,
+        "right": 0.0,
+        "bottom": 0.0
+      },
+      "by_image": [
+        {
+          "sample_id": "139",
+          "detections": 100,
+          "out_of_bounds": 0
+        },
+        {
+          "sample_id": "285",
+          "detections": 6,
+          "out_of_bounds": 0
+        }
+      ]
+    }
+  },
+  "saved_native_conversion": {
+    "status": "PASS",
+    "report": {
+      "status": "EXTERNAL_JSON_IMPORT_AUDITED",
+      "native_format": "mmdet2_bbox",
+      "native_file_sha256": "d5a689dc9326020db7a445f3efb1895f6735ad50fd07f724864f27656372d175",
+      "dataset_digest": "a5463579778c74b2ee93228f10eb1db9da90608beb049340a5cc1abcba92f1c9",
+      "split": "dev",
+      "images": 2,
+      "native_detections": 106,
+      "canonical_detections": 106,
+      "values_changed": 0,
+      "category_map": {
+        "0": 1,
+        "1": 2,
+        "2": 3,
+        "3": 4,
+        "4": 5,
+        "5": 6,
+        "6": 7,
+        "7": 8,
+        "8": 9,
+        "9": 10,
+        "10": 11,
+        "11": 13,
+        "12": 14,
+        "13": 15,
+        "14": 16,
+        "15": 17,
+        "16": 18,
+        "17": 19,
+        "18": 20,
+        "19": 21,
+        "20": 22,
+        "21": 23,
+        "22": 24,
+        "23": 25,
+        "24": 27,
+        "25": 28,
+        "26": 31,
+        "27": 32,
+        "28": 33,
+        "29": 34,
+        "30": 35,
+        "31": 36,
+        "32": 37,
+        "33": 38,
+        "34": 39,
+        "35": 40,
+        "36": 41,
+        "37": 42,
+        "38": 43,
+        "39": 44,
+        "40": 46,
+        "41": 47,
+        "42": 48,
+        "43": 49,
+        "44": 50,
+        "45": 51,
+        "46": 52,
+        "47": 53,
+        "48": 54,
+        "49": 55,
+        "50": 56,
+        "51": 57,
+        "52": 58,
+        "53": 59,
+        "54": 60,
+        "55": 61,
+        "56": 62,
+        "57": 63,
+        "58": 64,
+        "59": 65,
+        "60": 67,
+        "61": 70,
+        "62": 72,
+        "63": 73,
+        "64": 74,
+        "65": 75,
+        "66": 76,
+        "67": 77,
+        "68": 78,
+        "69": 79,
+        "70": 80,
+        "71": 81,
+        "72": 82,
+        "73": 84,
+        "74": 85,
+        "75": 86,
+        "76": 87,
+        "77": 88,
+        "78": 89,
+        "79": 90
+      },
+      "native_execution_verified": false,
+      "limits": "Exact JSON conversion only. These inputs do not prove genuine MMDetection execution or model provenance."
+    },
+    "error": null
+  },
+  "wrapped_execution": {
+    "response": {
+      "error": null,
+      "protocol_version": "1.0",
+      "result": {
+        "actual_source_identity": {
+          "git_remote": null,
+          "git_sha": null,
+          "source_path": "/usr/local/lib/python3.10/site-packages/mmdet/__init__.py",
+          "verified_from_git": false
+        },
+        "checkpoint_sha256": "c2398f9ec0843ed9a29e72d7a788741abbf2b4250e64f8f793092eaecaa0ab4f",
+        "config_graph_sha256": "fef61504367a35d1fae9c791b136a9113cbced6d2d8b1d99f05b9ad41a92c9d5",
+        "environment": {
+          "cuda_visible_devices": null,
+          "mmcv": "1.7.1",
+          "mmdet": "2.28.2",
+          "mmdet_source": {
+            "git_remote": null,
+            "git_sha": null,
+            "source_path": "/usr/local/lib/python3.10/site-packages/mmdet/__init__.py",
+            "verified_from_git": false
+          },
+          "mmengine": null,
+          "platform": "linux",
+          "python": "3.10.17",
+          "python_executable": "/usr/local/bin/python",
+          "torch": "1.13.1+cu117"
+        },
+        "evidence_artifacts": [
+          "resolved_config.py.txt",
+          "config_graph.json",
+          "upstream_predictions.jsonl",
+          "predictions.jsonl",
+          "conversion_audit.json",
+          "heritage_execution.json"
+        ],
+        "heritage_level": "H3_OUTPUT_PARITY_VERIFIED",
+        "nonclaims": [
+          "No published model-zoo metric reproduction unless separately evaluated on exact reference data/protocol",
+          "No heritage training reproduction",
+          "Source repository revision is independently verified only when a Git checkout is discoverable"
+        ],
+        "representation_arrays_exact": true,
+        "resolved_config_sha256": "15e6af6a5946fab376598fbdfa1183dab56f4422dea6b4cd727a546b882bf8fa",
+        "revision_claim": "e9cae2d0787cd5c2fc6165a6061f92fa09e48fb1",
+        "revision_match": null,
+        "status": "OUTPUT_PARITY_VERIFIED",
+        "upstream_claim": "open-mmlab/mmdetection"
+      },
+      "schema_version": "1.0",
+      "status": "SUCCEEDED"
+    },
+    "repeatability": [
+      {
+        "sample_id": "139",
+        "labels_and_order_exact": true,
+        "boxes_atol_1e_6": true,
+        "scores_atol_1e_7": true
+      },
+      {
+        "sample_id": "285",
+        "labels_and_order_exact": true,
+        "boxes_atol_1e_6": true,
+        "scores_atol_1e_7": true
+      }
+    ],
+    "repeatability_pass": true
+  },
+  "environment": {
+    "python": "3.10.17 (main, May 21 2025, 23:32:05) [GCC 12.2.0]",
+    "torch": "1.13.1+cu117",
+    "cuda_runtime": "11.7",
+    "cuda_device": "Tesla T4",
+    "mmdet": "2.28.2",
+    "mmcv": "1.7.1",
+    "numpy": "1.23.5",
+    "torchvision": "0.14.1+cu117"
+  },
+  "criteria": {
+    "box_atol": 1e-06,
+    "score_atol": 1e-07,
+    "labels_and_order": "exact"
+  },
+  "separate_statuses": {
+    "native_inference": "REUSED_PRIOR_PASS",
+    "transport_fidelity": "PASS",
+    "conversion_fidelity": "PASS",
+    "runtime_repeatability": "PASS",
+    "evaluator_equivalence": "NOT_RUN_NOT_REQUIRED_FOR_INTEROPERABILITY_SMOKE"
+  },
+  "controls": {
+    "training": false,
+    "optimizer_steps": 0,
+    "checkpoint_writes": 0,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "gpu_concurrency": 1,
+    "geometry_modification": "NONE"
+  },
+  "runtime_seconds": 21.667459096,
+  "limits": [
+    "Two-image interoperability smoke only; no accuracy claim.",
+    "Every native detection is preserved; no clipping, filtering, or normalization."
+  ]
+}

@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"bytes":{"minimum":0,"title":"Bytes","type":"integer"},"path":{"title":"Path","type":"string"},"schema_version":{"const":"1.0","default":"1.0","title":"Schema Version","type":"string"},"sha256":{"pattern":"^[a-f0-9]{64}$","title":"Sha256","type":"string"}},"required":["path","sha256","bytes"],"title":"ArtifactEntry","type":"object"}

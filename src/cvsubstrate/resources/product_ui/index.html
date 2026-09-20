@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+<title>CVRS · Research browser</title><link rel="stylesheet" href="app.css"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<aside class="sidebar"><a href="#overview" class="brand" aria-label="Research browser home"><span class="mark">C</span><span>CVRS<small>Research browser</small></span></a>
+<nav aria-label="Research navigation">
+<a href="#overview" data-route="overview">Overview</a><a href="#runs" data-route="runs">Experiments <span id="count-runs"></span></a>
+<a href="#models" data-route="models">Models <span id="count-models"></span></a><a href="#datasets" data-route="datasets">Datasets <span id="count-datasets"></span></a>
+<a href="#claims" data-route="claims">Claims <span id="count-claims"></span></a><a href="#attempts" data-route="attempts">Attempts <span id="count-attempts"></span></a>
+<a href="#compare" data-route="compare">Compare runs</a><a href="#issues" data-route="issues">Export diagnostics</a></nav>
+<div class="sidebar-foot"><span class="dot"></span> Local, static & portable<small>Release __VERSION__</small><a href="catalog.json">Raw catalogue JSON ↗</a></div></aside>
+<div class="workspace"><header class="topbar"><span id="crumb">Research / Overview</span><span class="pill neutral">No hosted service</span></header>
+<main id="main" tabindex="-1"><div class="heading"><div><span class="eyebrow">EXPERIMENTS · EVIDENCE · REPRODUCTION</span><h1 id="page-title">Research overview</h1><p id="page-description">See what ran, what changed, and what the evidence actually supports.</p></div><button id="download" class="secondary">Export catalogue</button></div>
+<div id="notice" class="notice" role="note"></div>
+<section id="stats" class="stats" aria-label="Catalogue totals"></section>
+<div id="filters" class="filters"><label class="search-label">Search <input id="search" type="search" placeholder="Name, identifier, framework…"></label>
+<label>Task <select id="task-filter"><option value="">All tasks</option></select></label>
+<label>Purpose <select id="purpose-filter"><option value="">All purposes</option><option value="software_fixture">Software fixtures</option><option value="research_dataset">Research data</option><option value="research">Research</option><option value="unknown">Unknown</option></select></label>
+<span id="result-count" aria-live="polite"></span></div>
+<section id="content" aria-live="polite"></section>
+</main><footer>Integrity checks identify artifact changes. They do not establish scientific correctness or independence.</footer></div>
+<dialog id="detail"><div class="dialog-head"><h2 id="detail-title">Record</h2><button id="close-detail" aria-label="Close record">✕</button></div><div id="detail-body"></div></dialog>
+<script type="application/json" id="catalog-data">__CATALOG__</script><script src="app.js"></script></body></html>

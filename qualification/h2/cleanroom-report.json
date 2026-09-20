@@ -1,0 +1,52 @@
+{
+  "schema": "cvrs.h2.cleanroom.v1",
+  "status": "PASS_CLEANROOM_WHEEL_ONLY",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "package_import": "D:\\cvrs-h2-cleanroom-release-final-r2\\venv\\Lib\\site-packages\\cvsubstrate\\__init__.py",
+  "source_checkout_on_sys_path": false,
+  "ml_frameworks_absent": {
+    "torch": true,
+    "torchvision": true,
+    "transformers": true,
+    "mmdet": true,
+    "mmcv": true,
+    "mmseg": true,
+    "mmrotate": true
+  },
+  "rq001_manifest_files_verified": 16,
+  "rq002_evidence_files_verified": 15,
+  "browser": {
+    "status": "BUILT",
+    "destination": "D:\\cvrs-h2-cleanroom-release-final-r2\\browser",
+    "lanes": 20,
+    "references": 2,
+    "external_network_required": false
+  },
+  "capsule": {
+    "status": "CREATED",
+    "capsule": "D:\\cvrs-h2-cleanroom-release-final-r2\\capsule",
+    "files": 33,
+    "bytes": 3820810,
+    "external_dependencies": 0,
+    "dependency_closure": null
+  },
+  "capsule_validation": {
+    "status": "VERIFIED",
+    "files": 33,
+    "external_references": [],
+    "execution_verified": false,
+    "dependency_closure": null
+  },
+  "saved_artifact_reevaluation": {
+    "kind": "saved_artifact_metadata_only",
+    "model_rerun": false,
+    "nearest_indices_recomputed": [
+      0,
+      1
+    ],
+    "matches_recorded": true,
+    "feature_artifact_sha256_matches": true
+  },
+  "tamper_rejected": true,
+  "missing_evidence_rejected": true
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Architecture RFC",
+  "description": "Architecture RFC with reproducible context",
+  "body": [
+    {
+      "type": "textarea",
+      "id": "field-0",
+      "attributes": {
+        "label": "Concrete user problem"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-1",
+      "attributes": {
+        "label": "Proposed public contract"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-2",
+      "attributes": {
+        "label": "Compatibility and security impact"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-3",
+      "attributes": {
+        "label": "Alternatives"
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

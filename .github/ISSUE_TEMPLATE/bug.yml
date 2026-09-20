@@ -1,0 +1,46 @@
+{
+  "name": "Bug report",
+  "description": "Bug report with reproducible context",
+  "body": [
+    {
+      "type": "textarea",
+      "id": "field-0",
+      "attributes": {
+        "label": "Command and structured error"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-1",
+      "attributes": {
+        "label": "Doctor output and versions"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-2",
+      "attributes": {
+        "label": "Minimal public fixture"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-3",
+      "attributes": {
+        "label": "Expected versus observed behavior"
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

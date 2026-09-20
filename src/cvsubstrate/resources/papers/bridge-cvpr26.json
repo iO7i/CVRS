@@ -1,0 +1,44 @@
+{
+  "id": "bridge-cvpr26",
+  "title": "Bridge: Basis-Driven Causal Inference Marries VFMs for Domain Generalization",
+  "source_urls": [
+    "https://github.com/MingboHong/Domain-Generlization-Bridge",
+    "https://arxiv.org/abs/2604.26820"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/MingboHong/Domain-Generlization-Bridge",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "mmdetection",
+    "pytorch"
+  ],
+  "tasks": [
+    "hbb_detection"
+  ],
+  "assets": [
+    {
+      "id": "vfm_weights",
+      "kind": "weights",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "domain_dataset",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    }
+  ],
+  "commands": {},
+  "integration_boundary": "whole_environment",
+  "status": "SOURCE_INSPECTED",
+  "limitations": [
+    "The source describes VFM features and a causal basis block with task-specific heads. Frozen features may be cacheable only if preprocessing/feature semantics are preserved.",
+    "No automatic cross-worker autograd or surgical replacement of the native model graph.",
+    "Exact invocation/config/output paths remain required from the selected checkout."
+  ],
+  "schema_version": "1.0",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19"
+}

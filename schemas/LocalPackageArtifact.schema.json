@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"path":{"title":"Path","type":"string"},"schema_version":{"const":"1.0","default":"1.0","title":"Schema Version","type":"string"},"sha256":{"pattern":"^[0-9a-f]{64}$","title":"Sha256","type":"string"}},"required":["path","sha256"],"title":"LocalPackageArtifact","type":"object"}

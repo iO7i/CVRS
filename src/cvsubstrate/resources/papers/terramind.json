@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "id": "terramind",
+  "title": "TerraMind: generative multimodal Earth-observation foundation model",
+  "source_urls": [
+    "https://github.com/IBM/terramind"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/IBM/terramind",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "terratorch",
+    "torchgeo",
+    "pytorch",
+    "huggingface"
+  ],
+  "tasks": [
+    "earth_observation",
+    "semantic_segmentation"
+  ],
+  "assets": [
+    {
+      "id": "weights",
+      "kind": "weights",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "dataset",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    }
+  ],
+  "commands": {},
+  "integration_boundary": "whole_environment",
+  "status": "SOURCE_INSPECTED",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19",
+  "limitations": [
+    "Band/modality order and sensor normalization are part of the model input contract.",
+    "Use the selected native TerraTorch recipe and an explicit task decoder; do not split a differentiable multimodal training graph into detached workers."
+  ]
+}

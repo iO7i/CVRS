@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: >-
+  If you use CVRS in research, cite the archived software release and the associated paper when available.
+title: CV Research Substrate
+type: software
+version: 0.7.1a3
+authors:
+  - family-names: Talbi
+    given-names: Hosam
+    alias: iO7i
+repository-code: https://github.com/iO7i/CVRS
+license: Apache-2.0

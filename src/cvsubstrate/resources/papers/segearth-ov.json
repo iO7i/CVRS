@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "segearth-ov",
+  "title": "SegEarth-OV: Towards Training-Free Open-Vocabulary Segmentation for Remote Sensing Images",
+  "source_urls": [
+    "https://github.com/likyoo/SegEarth-OV"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/likyoo/SegEarth-OV",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "mmsegmentation",
+    "mmcv",
+    "pytorch",
+    "clip"
+  ],
+  "tasks": [
+    "semantic_segmentation"
+  ],
+  "assets": [
+    {
+      "id": "weights",
+      "kind": "weights",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "dataset",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    }
+  ],
+  "commands": {
+    "evaluate_candidate": [
+      "${python}",
+      "eval.py",
+      "--config",
+      "${config}",
+      "--workdir",
+      "${output}"
+    ]
+  },
+  "integration_boundary": "whole_environment",
+  "status": "SOURCE_INSPECTED",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19",
+  "limitations": [
+    "Whole coupled segmentation/feature-upsample graph remains in the native environment.",
+    "Dataset-specific configs and original class vocabulary must be retained. Source describes results.xlsx; canonical predictions require an explicit output adapter."
+  ]
+}

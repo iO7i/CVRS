@@ -1,0 +1,42 @@
+{
+  "source_release": "0.5.0a1",
+  "original_zip_sha256": "a4d73fdc851419df99b10df52b9fc756b64314111b3a3e61ad91434bb47d2d48",
+  "artifacts": [
+    {
+      "path": "examples/fixtures/dataset.json",
+      "schema": "DatasetManifest",
+      "sha256": "c08213fa9911d2e52b80880f1b8d618c736ea03e89ab92ac2be9d2e8dba4b091",
+      "original_zip_member": "cv-research-substrate-0.5.0a1/examples/fixtures/dataset.json"
+    },
+    {
+      "path": "examples/fixtures/real.json",
+      "schema": "ExperimentSpec",
+      "sha256": "7050e01339f58fa0ca8e708d45294d935197a2fdc8b8b7391f26a14965a8b7b5",
+      "original_zip_member": "cv-research-substrate-0.5.0a1/examples/fixtures/real.json"
+    },
+    {
+      "path": "examples/fixtures/supplement.json",
+      "schema": "ExperimentSpec",
+      "sha256": "a22abd1a16070b5f447b422d2806379455a9cec31e3d57c12059bbd65c6437d5",
+      "original_zip_member": "cv-research-substrate-0.5.0a1/examples/fixtures/supplement.json"
+    },
+    {
+      "path": "examples/diagnostic-protocol.json",
+      "schema": "EvaluationProtocol",
+      "sha256": "313a13f89d1a965dd8060acbcc47401da304a235bc52a1f97355a0ed3ec621b3",
+      "original_zip_member": "cv-research-substrate-0.5.0a1/examples/diagnostic-protocol.json"
+    },
+    {
+      "path": "examples/coco-protocol.json",
+      "schema": "EvaluationProtocol",
+      "sha256": "cccb21759d56209bd16851027b51150233afc4bc2675f5ac2a0669cfd0172e40",
+      "original_zip_member": "cv-research-substrate-0.5.0a1/examples/coco-protocol.json"
+    },
+    {
+      "path": "examples/research-v03/sidecars/generic.canonical.json",
+      "schema": "SyntheticRecord",
+      "sha256": "fb22a65be446d68387c20bc7ab35c17abe795dc4dcca453c0de2739ebd729d41",
+      "original_zip_member": "cv-research-substrate-0.5.0a1/examples/research-v03/sidecars/generic.canonical.json"
+    }
+  ]
+}

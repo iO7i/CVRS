@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [{name = "Hosam Talbi"}]
+name = "cv-research-substrate"
+dynamic = ["version"]
+description = "Explicit computer-vision experiments, isolated workers, and verifiable evidence"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+dependencies = ["pydantic>=2.11,<3"]
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: Artificial Intelligence"]
+
+[project.optional-dependencies]
+profiling = ["psutil>=6,<8"]
+profiling-gpu = ["psutil>=6,<8", "nvidia-ml-py>=12,<14"]
+adoption = ["packaging>=24,<27", "PyYAML>=6,<7"]
+docs = ["mkdocs>=1.6,<2", "mkdocs-material>=9.5,<10"]
+hub = ["huggingface-hub>=0.30,<2"]
+bridge-supervision = ["supervision>=0.25,<1", "numpy>=1.26,<3"]
+bridge-fiftyone = ["fiftyone>=1,<2"]
+bridge-wandb = ["wandb>=0.19,<1"]
+bridge-mlflow = ["mlflow>=2.20,<4"]
+bridge-dvc = ["dvc>=3,<4"]
+bridge-openml = ["openml>=0.15,<1"]
+bridge-torchgeo = ["torchgeo>=0.7,<1"]
+bridge-terratorch = ["terratorch>=1,<2"]
+
+signing = ["cryptography>=44,<52"]
+vision = ["torch==2.10.0", "torchvision==0.25.0", "transformers>=4.51,<6", "safetensors>=0.5,<1", "numpy>=1.26,<3", "Pillow>=10,<13"]
+quantization = ["onnxruntime>=1.20,<2", "onnx>=1.17,<2", "numpy>=1.26,<3", "Pillow>=10,<13"]
+quantization-openvino = ["openvino>=2025,<2027", "nncf>=2.15,<4", "onnx>=1.17,<2", "numpy>=1.26,<3"]
+coco = ["pycocotools==2.0.11", "numpy>=1.26,<3"]
+native = ["torch==2.10.0", "torchvision==0.25.0", "Pillow>=10,<13", "numpy>=1.26,<3"]
+research = ["Pillow>=10,<13"]
+geo = ["rasterio>=1.4,<2", "pyproj>=3.6,<4", "Pillow>=10,<13", "numpy>=1.26,<3"]
+environments = ["PyYAML>=6,<7"]
+ultralytics = ["ultralytics>=8.3,<9"]
+rfdetr = ["rfdetr>=1,<2"]
+backbones = ["timm>=1,<2", "transformers>=4.50,<6", "safetensors>=0.5,<1"]
+onnx = ["torch==2.10.0", "onnx>=1.17,<2", "onnxscript>=0.3,<1", "numpy>=1.26,<3"]
+ort = ["onnxruntime>=1.20,<2", "onnx>=1.17,<2", "numpy>=1.26,<3"]
+openvino = ["openvino>=2025,<2027", "numpy>=1.26,<3"]
+geometry-validation = ["shapely>=2,<3"]
+dev = ["pytest>=8,<10", "pytest-cov>=5,<8", "jsonschema>=4,<5", "ruff>=0.11", "mypy>=1.15"]
+
+[project.urls]
+Repository = "https://github.com/iO7i/CVRS"
+Issues = "https://github.com/iO7i/CVRS/issues"
+Security = "https://github.com/iO7i/CVRS/security/advisories/new"
+
+[project.scripts]
+cvrs = "cvsubstrate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cvsubstrate = ["py.typed", "resources/**/*.json", "resources/**/*.md", "resources/**/*.svg", "resources/**/*.html", "resources/**/*.css", "resources/**/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = ["native: executes real torchvision models", "coco: requires official pycocotools", "heritage: requires a trusted configured MMDetection environment"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.mypy]
+python_version = "3.11"
+check_untyped_defs = true
+ignore_missing_imports = true
+files = [
+    "src/cvsubstrate/__init__.py",
+    "src/cvsubstrate/v1.py",
+    "src/cvsubstrate/cli.py",
+    "src/cvsubstrate/cli_adoption.py",
+    "src/cvsubstrate/cli_closure.py",
+    "src/cvsubstrate/cli_frontier.py",
+    "src/cvsubstrate/cli_groundwork.py",
+    "src/cvsubstrate/cli_product.py",
+    "src/cvsubstrate/cli_research.py",
+    "src/cvsubstrate/documentation.py",
+    "src/cvsubstrate/product",
+    "src/cvsubstrate/publication",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "cvsubstrate._version.__version__"}

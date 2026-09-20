@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "checked_on": "2026-09-19",
+  "scope": "Chosen pinned releases inspected on official GitHub release/commit pages; not a claim that generated workflows ran.",
+  "actions": {
+    "actions/checkout": {
+      "version": "v4.3.1",
+      "sha": "34e114876b0b11c390a56381ad16ebd13914f8d5",
+      "source": "https://github.com/actions/checkout/commit/34e114876b0b11c390a56381ad16ebd13914f8d5"
+    },
+    "actions/setup-python": {
+      "version": "v7.0.0",
+      "sha": "5fda3b95a4ea91299a34e894583c3862153e4b97",
+      "source": "https://github.com/actions/setup-python/commit/5fda3b95a4ea91299a34e894583c3862153e4b97"
+    },
+    "actions/upload-artifact": {
+      "version": "v7.0.1",
+      "sha": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "source": "https://github.com/actions/upload-artifact/commit/043fb46d1a93c77aae656e7c1c64a875d1fc6a0a"
+    },
+    "actions/download-artifact": {
+      "version": "v8.0.1",
+      "sha": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+      "source": "https://github.com/actions/download-artifact/commit/3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c"
+    },
+    "actions/attest": {
+      "version": "v4.2.2",
+      "sha": "1e69f48acb82d1966a394da916b4c1698aa569d6",
+      "source": "https://github.com/actions/attest/commit/1e69f48acb82d1966a394da916b4c1698aa569d6"
+    },
+    "pypa/gh-action-pypi-publish": {
+      "version": "v1.14.2",
+      "sha": "dc37677b2e1c63e2034f94d8a5b11f265b73ba33",
+      "source": "https://github.com/pypa/gh-action-pypi-publish/commit/dc37677b2e1c63e2034f94d8a5b11f265b73ba33"
+    },
+    "actions/configure-pages": {
+      "version": "v6.0.0",
+      "sha": "45bfe0192ca1faeb007ade9deae92b16b8254a0d",
+      "source": "https://github.com/actions/configure-pages/commit/45bfe0192ca1faeb007ade9deae92b16b8254a0d"
+    },
+    "actions/upload-pages-artifact": {
+      "version": "v5.0.0",
+      "sha": "fc324d3547104276b827a68afc52ff2a11cc49c9",
+      "source": "https://github.com/actions/upload-pages-artifact/commit/fc324d3547104276b827a68afc52ff2a11cc49c9"
+    },
+    "actions/deploy-pages": {
+      "version": "v5.0.0",
+      "sha": "cd2ce8fcbc39b97be8ca5fce6e763baed58fa128",
+      "source": "https://github.com/actions/deploy-pages/commit/cd2ce8fcbc39b97be8ca5fce6e763baed58fa128"
+    },
+    "github/codeql-action": {
+      "version": "v4.37.6",
+      "sha": "5595ccaf912efad79be6eef63a5619ff05969be3",
+      "source": "https://github.com/github/codeql-action/commit/5595ccaf912efad79be6eef63a5619ff05969be3"
+    }
+  }
+}

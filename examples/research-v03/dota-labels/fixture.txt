@@ -1,0 +1,4 @@
+imagesource:procedural-software-fixture
+gsd:None
+8 8 24 8 24 20 8 20 small-vehicle 0
+28 28 40 28 40 38 28 38 small-vehicle 1

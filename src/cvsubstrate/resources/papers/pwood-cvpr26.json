@@ -1,0 +1,58 @@
+{
+  "id": "pwood-cvpr26",
+  "title": "Partial Weakly-Supervised Oriented Object Detection",
+  "source_urls": [
+    "https://github.com/VisionXLab/PWOOD"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/VisionXLab/PWOOD",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "mmrotate",
+    "mmdetection2",
+    "mmcv"
+  ],
+  "tasks": [
+    "obb_detection"
+  ],
+  "assets": [
+    {
+      "id": "dota",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "checkpoint",
+      "kind": "weights",
+      "license_status": "UNKNOWN"
+    }
+  ],
+  "commands": {
+    "train_candidate": [
+      "${python}",
+      "train.py",
+      "${config}",
+      "--work-dir",
+      "${output}"
+    ],
+    "predict_candidate": [
+      "${python}",
+      "test.py",
+      "${config}",
+      "${checkpoint}"
+    ]
+  },
+  "integration_boundary": "whole_environment",
+  "status": "SOURCE_INSPECTED",
+  "limitations": [
+    "Source README describes Python 3.8, PyTorch 1.13.1/CUDA 11.6 and mmdet<3. These are recipe evidence, not a solver-produced environment.",
+    "Choose the actual DOTA variant/config from the checkout; inspect native output flags before wrapping.",
+    "No authors' checkpoint, dataset or published metric has been executed here."
+  ],
+  "schema_version": "1.0",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19"
+}

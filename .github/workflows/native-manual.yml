@@ -1,0 +1,26 @@
+name: Owner-approved native fixtures
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cpu:
+    environment: trusted-native
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -e '.[dev,adoption,native,geo,signing]'
+      - run: python -m pytest -m native
+        env:
+          OMP_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+      - run: cvrs demo-all native-demo
+        env:
+          OMP_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+      # Configure required environment reviewers. This workflow does not load third-party checkpoints.

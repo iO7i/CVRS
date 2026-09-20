@@ -1,0 +1,45 @@
+{
+  "schema": "cvrs.rq002.ultralytics-yolo26n-disposition.v1",
+  "status": "PASS_NATIVE_CVRS_FAIL_ONNX_FIDELITY",
+  "source_report": "qualification-attempt-01/report.json",
+  "native_execution": "PASS_304_DETECTIONS",
+  "saved_native_conversion": "PASS_304_OF_304",
+  "wrapped_execution": "PASS_304_OF_304",
+  "wrapped_comparison": {
+    "labels_and_order": "EXACT",
+    "boxes": "EXACT",
+    "scores": "EXACT",
+    "note": "The source report misclassified the successful worker envelope because it expected status=ok; the preserved envelope says SUCCEEDED and its raw output is exactly equal to native inference. No inference was rerun."
+  },
+  "geometry": {
+    "native_finite": 304,
+    "native_ordered": 304,
+    "native_in_bounds": 304,
+    "clipped_or_filtered": 0
+  },
+  "export": "PASS_ONNX_CHECKER",
+  "onnxruntime_execution": "PASS_CPU",
+  "onnxruntime_repeatability": "PASS_BITWISE_EXACT_TWO_RUNS",
+  "onnxruntime_geometry": "PASS_305_FINITE_ORDERED_IN_BOUNDS",
+  "deployment_fidelity": "FAIL_COUNT_ORDER_COORDINATE_AND_SCORE_PARITY",
+  "deployment_counts": {
+    "native": 304,
+    "onnxruntime": 305,
+    "image_139": {"native": 300, "onnxruntime": 300},
+    "image_285": {"native": 4, "onnxruntime": 5}
+  },
+  "r2_16": "FAIL_CVRS_ULTRALYTICS_ONNX_FIDELITY_EXPORT_AND_ORT_PASS",
+  "evaluator_equivalence": "NOT_RUN_NO_REGISTERED_GROUND_TRUTH",
+  "artifacts": {
+    "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "onnx_sha256": "26ef925ba2cb6b893e634e5e22645b8f84fd25a5a95037d654efde4ea6ccf76a"
+  },
+  "controls": {
+    "training": false,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "gpu_concurrency": 1,
+    "automatic_paid_retry": false,
+    "geometry_modification": "NONE"
+  }
+}

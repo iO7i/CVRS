@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "name": "research",
+  "backend": "venv",
+  "pack": "core",
+  "python": "python",
+  "python_constraint": ">=3.11,<3.14",
+  "requirements": [],
+  "expected_modules": ["json", "sqlite3"],
+  "allow_network": false,
+  "allow_python_download": false,
+  "allow_source_builds": false,
+  "notes": "Installed-interpreter starter; add reviewed exact framework pins or a complete set of hashed local wheels. This empty environment does not contain CVRS or a model SDK."
+}

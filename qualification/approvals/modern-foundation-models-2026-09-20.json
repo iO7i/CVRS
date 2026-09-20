@@ -1,0 +1,54 @@
+{
+  "schema": "cvrs.rq002.combined-model-access-approval.v1",
+  "status": "APPROVED_2026-09-20",
+  "decision_to_record": "APPROVE_GROUNDING_RETRY_AND_SAM3_DINOV3_ACQUISITION",
+  "grounding_dino_retry": {
+    "reason": "The first paid attempt completed native inference but lost its ephemeral artifacts when the wrapper rejected a request missing protocol_version. The corrected request is staged; no scientific parameter changed.",
+    "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "remote_assets_already_staged_bytes": 690305545,
+    "gpu": "T4",
+    "maximum_additional_cost_usd": 0.03,
+    "automatic_retry_after_this_attempt": false
+  },
+  "sam3": {
+    "source": "facebookresearch/sam3",
+    "source_revision": "2345a4ad109ac29c569da749c91d84f10dc08c40",
+    "checkpoint_repo": "facebook/sam3",
+    "checkpoint_revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+    "checkpoint_file": "sam3.pt",
+    "checkpoint_sha256_from_hf_lfs": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "checkpoint_bytes": 3450062241,
+    "access": "MANUAL_HUGGING_FACE_GATE; user must request and receive access and accept the SAM License",
+    "license": "SAM License, last updated 2025-11-19; redistribution and research-publication acknowledgment obligations apply",
+    "runtime": "Python >=3.12, PyTorch >=2.7, CUDA >=12.6; proposed A10G 24 GiB",
+    "qualification_scope": "Two frozen COCO images; detached Grounding-DINO and Ultralytics box artifacts; deterministic top-8-by-native-score boxes per producer per image; no box clipping or coordinate rewrite; native masks preserved.",
+    "maximum_cost_usd": 0.30
+  },
+  "dinov3": {
+    "source": "facebookresearch/dinov3",
+    "source_revision": "6876159a11b4df116f30f667f8c9888617df0751",
+    "checkpoint_repo": "facebook/dinov3-vits16-pretrain-lvd1689m",
+    "checkpoint_revision": "114c1379950215c8b35dfcd4e90a5c251dde0d32",
+    "checkpoint_file": "model.safetensors",
+    "checkpoint_sha256_from_hf_lfs": "4610ad75edef83e75afdebf162d148dc628045ea6cbb83d67d4708c709c4f91d",
+    "checkpoint_bytes": 86406384,
+    "access": "MANUAL_HUGGING_FACE_GATE; user must request and receive access and accept the DINOv3 License",
+    "license": "DINOv3 License Agreement",
+    "runtime": "Pinned local official repository + PyTorch hub local-source path; proposed T4",
+    "qualification_scope": "Global and selected dense features on the same two frozen COCO images; serialize, reload, exact artifact hashes, and a two-image self-retrieval smoke without scientific quality claims.",
+    "maximum_cost_usd": 0.07
+  },
+  "combined_maximum_additional_cost_usd": 0.40,
+  "campaign_cap_usd": 8.0,
+  "campaign_spend_before_approval_usd": 0.10523341,
+  "remaining_campaign_cap_before_approval_usd": 7.89476659,
+  "controls": {
+    "training": false,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "gpu_concurrency": 1,
+    "heavy_assets_remote_only": true,
+    "automatic_paid_retry": false,
+    "tensor_rt": "BLOCKED_BY_ULTRALYTICS_ONNX_FIDELITY_FAILURE"
+  }
+}

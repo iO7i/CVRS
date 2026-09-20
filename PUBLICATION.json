@@ -1,0 +1,20 @@
+{
+  "authors": [
+    {
+      "github": "iO7i",
+      "name": "Hosam Talbi"
+    }
+  ],
+  "cli_name": "cvrs",
+  "copyright_holder": "Hosam Talbi",
+  "display_name": "CV Research Substrate",
+  "distribution_name": "cv-research-substrate",
+  "identity_approved": true,
+  "import_name": "cvsubstrate",
+  "license_approved": true,
+  "license_id": "Apache-2.0",
+  "private_terms": [],
+  "repository_url": "https://github.com/iO7i/CVRS",
+  "schema_version": "1.0",
+  "security_contact": "https://github.com/iO7i/CVRS/security/advisories/new"
+}

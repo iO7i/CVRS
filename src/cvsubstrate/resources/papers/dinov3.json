@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "dinov3",
+  "title": "DINOv3 reference implementation and model assets",
+  "source_urls": [
+    "https://github.com/facebookresearch/dinov3"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/facebookresearch/dinov3",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "pytorch",
+    "timm",
+    "transformers"
+  ],
+  "tasks": [
+    "visual_features"
+  ],
+  "assets": [
+    {
+      "id": "weights",
+      "kind": "weights",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "dataset",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    }
+  ],
+  "commands": {},
+  "integration_boundary": "whole_environment",
+  "status": "SOURCE_INSPECTED",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19",
+  "limitations": [
+    "A backbone feature set is not automatically compatible with an arbitrary detection head. Record channels, strides and processor geometry.",
+    "Select an explicit architecture/weights revision and review its license. No model download or pretraining reproduction is implied."
+  ]
+}

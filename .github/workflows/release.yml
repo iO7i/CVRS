@@ -1,0 +1,108 @@
+# Generated from reviewed action-lock.json; owner activation still required.
+name: CVRS trusted release
+'on':
+  workflow_dispatch:
+    inputs:
+      registry:
+        type: choice
+        options:
+        - testpypi
+        - pypi
+        default: testpypi
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build:
+    if: startsWith(github.ref, 'refs/tags/v') && vars.CVRS_PUBLISH_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+    - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      with:
+        persist-credentials: false
+    - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+      with:
+        python-version: '3.13'
+    - run: python -m pip install -e ".[adoption]" pytest jsonschema setuptools wheel
+    - run: python -m pytest -m "not native"
+    - run: python tools/release_ci.py artifacts release-assets
+      env:
+        CVRS_RELEASE_TAG: ${{ github.ref_name }}
+        CVRS_RELEASE_REPOSITORY: ${{ github.repository }}
+    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: release-assets
+        path: release-assets/
+        if-no-files-found: error
+        retention-days: 30
+  attest:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    steps:
+    - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+      with:
+        name: release-assets
+        path: release-assets
+    - uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6
+      with:
+        subject-path: release-assets/packages/*
+    - uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6
+      with:
+        subject-path: release-assets/packages/*
+        sbom-path: release-assets/build-environment.cdx.json
+  publish:
+    needs:
+    - build
+    - attest
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.registry }}
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+    - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+      with:
+        name: release-assets
+        path: release-assets
+    - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33
+      with:
+        packages-dir: release-assets/packages/
+        repository-url: ${{ inputs.registry == 'testpypi' && 'https://test.pypi.org/legacy/' || 'https://upload.pypi.org/legacy/'
+          }}
+        attestations: true
+        skip-existing: false
+  github-draft:
+    needs:
+    - build
+    - attest
+    if: inputs.registry == 'pypi'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-release
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+      with:
+        name: release-assets
+        path: release-assets
+    - name: Create reviewed draft release
+      env:
+        GH_TOKEN: ${{ github.token }}
+        GH_REPO: ${{ github.repository }}
+        RELEASE_TAG: ${{ github.ref_name }}
+      run: gh release create "$RELEASE_TAG" --verify-tag --draft --title "$RELEASE_TAG" --notes-file release-assets/RELEASE_NOTES.md
+        release-assets/packages/* release-assets/release-artifacts.json release-assets/SHA256SUMS release-assets/build-environment.cdx.json

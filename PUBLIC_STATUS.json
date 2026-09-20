@@ -1,0 +1,313 @@
+{
+  "compatibility": "Version-sensitive external API paths stay provisional until executed",
+  "final_release_verification": {
+    "browser_release_qa": "PASS_RESEARCH_OBSERVATORY_V4",
+    "date": "2026-09-20",
+    "full_pytest": {
+      "environment": "Windows Python 3.12 controller test environment; optional/native dependencies absent where tests explicitly skipped",
+      "failed": 0,
+      "passed": 568,
+      "skipped": 105
+    },
+    "limits": "No new native-model qualification, GPU run, official benchmark, remote publication, DOI, or independent third-party reproduction was performed by this release-preparation pass.",
+    "mkdocs_strict": "PASS",
+    "mypy_maintained_scope": "PASS",
+    "public_export": "PASS_WITH_MACHINE_PATH_WARNINGS",
+    "publication_preflight": "READY_FOR_OWNER_RELEASE_REVIEW",
+    "ruff": "PASS",
+    "status": "LOCAL_RELEASE_GATES_PASSED_NOT_PUBLISHED"
+  },
+  "fixtures": "Owned CPU models/random initialization/procedural images; not benchmark scores",
+  "historical_closeout_checks_0_7_1a2": {
+    "cli": "all seven modules unchanged",
+    "core_installation": "wheel installed by pip with no index/dependency fetch; seven core/adoption dependencies reused from local installed records; no ML libraries on the core path",
+    "docs": {
+      "broken_local_links": 0,
+      "local_links": 171,
+      "pages": 27
+    },
+    "first_use": {
+      "artifacts": 22,
+      "integrity": "VERIFIED",
+      "model": "owned torchvision CPU detector with procedural images and random initialization",
+      "native_environment": "separate interpreter; CVRS installed from matching wheel; existing native dependencies reused locally",
+      "status": "SUCCEEDED"
+    },
+    "native_workers": "all 30 standalone shims unchanged",
+    "not_run": [
+      "new full regression/coverage run",
+      "Ruff",
+      "mypy",
+      "MkDocs",
+      "Windows/macOS execution",
+      "official COCO/DOTA benchmarks",
+      "pretrained external frameworks",
+      "GPU",
+      "independent reproduction",
+      "remote publication"
+    ],
+    "public_api": "same 59 exports, 129 schemas and component versions",
+    "release_regressions": {
+      "failed": 0,
+      "new_cases_included_in_total": true,
+      "new_closeout_cases": 5,
+      "passed": 157,
+      "skipped": 0
+    },
+    "scope": "Publication/product/adoption/hardening regression subset, exact package outputs and installed-wheel first-use; not a rerun of the entire historical suite.",
+    "status": "HISTORICAL_CLOSEOUT_RECORD"
+  },
+  "historical_software_evidence": [
+    {
+      "observations": {
+        "browser_mode": "9 in-memory Chromium interaction checks; actual navigation blocked by platform policy",
+        "core_only_native_deselected": 12,
+        "core_only_passed": 526,
+        "core_only_skipped": 82,
+        "full_suite_passed": 649,
+        "full_suite_skipped": 5,
+        "product_checks_passed": 49
+      },
+      "release": "0.7.0a1"
+    },
+    {
+      "observations": {
+        "coverage_scope": "pytest process only; excludes child-worker instrumentation",
+        "explicit_exports": 59,
+        "full_suite_failed": 0,
+        "full_suite_passed": 682,
+        "full_suite_skipped": 5,
+        "schemas": 129
+      },
+      "release": "0.7.1a1",
+      "source": "docs/HARDENING_071.md"
+    }
+  ],
+  "implemented_ecosystem_bridges": {
+    "dvc": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "inspect",
+        "fetch"
+      ]
+    },
+    "fiftyone": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "export",
+        "import"
+      ]
+    },
+    "hf": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "inspect",
+        "lock"
+      ]
+    },
+    "mlflow": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "export",
+        "import"
+      ]
+    },
+    "openml": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "inspect",
+        "import"
+      ]
+    },
+    "supervision": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "export",
+        "import"
+      ]
+    },
+    "terratorch": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "train",
+        "predict"
+      ]
+    },
+    "timm": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "inspect"
+      ]
+    },
+    "torchgeo": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "inspect",
+        "export"
+      ]
+    },
+    "wandb": {
+      "native_execution": "NOT_RUN",
+      "operations": [
+        "export",
+        "import"
+      ]
+    }
+  },
+  "implemented_stack_packs": {
+    "core": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "inspect",
+        "review"
+      ],
+      "task": "metadata"
+    },
+    "detectron2": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "train"
+      ],
+      "task": "hbb_masks_semantic"
+    },
+    "grounding-dino": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict"
+      ],
+      "task": "grounding"
+    },
+    "mmdeploy": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "export"
+      ],
+      "task": "hbb"
+    },
+    "mmdetection2": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "native_train"
+      ],
+      "task": "hbb"
+    },
+    "mmdetection3": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "native_train"
+      ],
+      "task": "hbb"
+    },
+    "mmrotate": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "native_train"
+      ],
+      "task": "obb"
+    },
+    "mmseg0": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "native_train"
+      ],
+      "task": "semantic_labels"
+    },
+    "mmseg1": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "native_train"
+      ],
+      "task": "semantic_labels"
+    },
+    "mmyolo": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "native_train"
+      ],
+      "task": "hbb"
+    },
+    "onedl": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "native_train"
+      ],
+      "task": "hbb"
+    },
+    "rfdetr": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "train",
+        "export"
+      ],
+      "task": "hbb"
+    },
+    "sam": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict"
+      ],
+      "task": "masks"
+    },
+    "sam2": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict"
+      ],
+      "task": "masks"
+    },
+    "sam3": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict"
+      ],
+      "task": "grounded_masks"
+    },
+    "terratorch": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "native_train",
+        "predict"
+      ],
+      "task": "geospatial"
+    },
+    "torchgeo": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "sample"
+      ],
+      "task": "geospatial"
+    },
+    "ultralytics": {
+      "native_execution": "NOT_CLAIMED",
+      "operations": [
+        "predict",
+        "train",
+        "export"
+      ],
+      "task": "hbb_obb_masks"
+    }
+  },
+  "maturity": "PUBLIC_ALPHA_RELEASE_CANDIDATE",
+  "productization": {
+    "managed_conda_docker_apptainer": "IMPLEMENTED_NOT_RUN",
+    "managed_uv": "LOCALLY_EXECUTED",
+    "managed_venv": "LOCALLY_EXECUTED",
+    "native_model_packs": "FINITE_APIS_NOT_CERTIFIED",
+    "native_service_SDKs": "NOT_RUN",
+    "public_publish": "READY_NOT_PUBLISHED",
+    "remote_security_activation": "NOT_RUN",
+    "rich_geometry_payloads": "ROUNDTRIP_TESTED"
+  },
+  "publication": "READY_NOT_PUBLISHED",
+  "release": "0.7.1a3",
+  "source_license": "Apache-2.0"
+}

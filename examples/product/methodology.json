@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "arms": [
+    {"id": "R", "real_exposures": {"value": 100, "origin": "planned"}, "synthetic_exposures": 0, "optimizer_updates": 100},
+    {"id": "R+S", "real_exposures": {"value": 100, "origin": "planned"}, "synthetic_exposures": 100, "optimizer_updates": 200}
+  ],
+  "declared_interventions": ["synthetic_exposures"],
+  "prompts": [],
+  "assets": [],
+  "lineage": [],
+  "seeds": {"planned": [11, 17, 23], "reported": [11, 17]},
+  "exclusions": [],
+  "hypothesis": "Example input for software review, not a measured study."
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "cvrs.rq002.dinov2-public-final-disposition.v1",
+  "status": "PASS_DINOV2_PUBLIC_GLOBAL_DENSE_RELOAD_RETRIEVAL",
+  "claim_boundary": "DINOv2 ViT-S/14 representations only; not DINOv3 qualification",
+  "modal_runs": ["ap-EhJpeoYoklyHlhfazRBqWt", "ap-keNLC0I0DUxf48YNT3x17K"],
+  "acquisition_sha256": "faf661e2b6648b0fe53c932c6918e612a97168d4e6ee240648783c1604fb0acd",
+  "qualification_zip_sha256": "c5b3c3e397728551ee59264c68d7bd38889a8f61b7843cad7609bd3e83fdab05",
+  "report_sha256": "1c1dbd708e3d392b7d1b83fdaaae7f736e74dea2ea46333bcbf57d836ac0e099",
+  "feature_artifact_sha256": "f0c38a9f6e689110d6ea1c28c2de2949541c7893086ce55f7692f3efd9a23644",
+  "observations": {
+    "images": 2,
+    "global_shape": [2, 384],
+    "dense_full_shape": [2, 256, 384],
+    "dense_subset_shape": [2, 8, 384],
+    "saved_feature_reload_exact": true,
+    "nearest_neighbor_self_retrieval": true,
+    "model_rerun_for_reload_or_retrieval": false
+  },
+  "controls": {"training": false, "optimizer_steps": 0, "protected_data_access": 0, "sealed_test_access": 0, "automatic_paid_retry": false},
+  "cost_usd": 0.00722269,
+  "evidence": "qualification/evidence/dinov2-public-2026-09-20/qualification/report.json"
+}

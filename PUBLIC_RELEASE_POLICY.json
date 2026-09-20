@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "required": [
+    "approved owner identity",
+    "exact approved license text",
+    "manual sensitive-data review"
+  ],
+  "exclude": [
+    "session evidence",
+    "checkpoints",
+    "data archives",
+    "private keys",
+    "recovery snapshots"
+  ],
+  "allow_preview": true,
+  "preview_is_publishable": false
+}

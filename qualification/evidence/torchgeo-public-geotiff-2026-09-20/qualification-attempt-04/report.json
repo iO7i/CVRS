@@ -1,0 +1,689 @@
+{
+  "schema": "cvrs.rq002.torchgeo-public-geotiff.v1",
+  "status": "PASS_TORCHGEO_PUBLIC_GEOTIFF_INTEROPERABILITY",
+  "source": {
+    "url": "https://raw.githubusercontent.com/rasterio/rasterio/d8d81ce1d04ca28abe8b94016d35b4337294b658/tests/data/RGB.byte.tif",
+    "revision": "d8d81ce1d04ca28abe8b94016d35b4337294b658",
+    "sha256": "d7cbe932c7ed74a627706a9e9df99f706df3e5abc7d45a49e9d00677a6b09eb4",
+    "bytes": 1745956,
+    "response_headers": {
+      "connection": "close",
+      "content-length": "1745956",
+      "cache-control": "max-age=300",
+      "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+      "content-type": "image/tiff",
+      "etag": "\"ddbfb3021ed1de066408eb9c97c374d10b647eef494386988b956de1feb18d00\"",
+      "strict-transport-security": "max-age=31536000",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "deny",
+      "x-xss-protection": "1; mode=block",
+      "x-github-request-id": "76C8:FD1A:176DBB3:19E5942:6AAF1787",
+      "x-github-edge-region": "fra",
+      "accept-ranges": "bytes",
+      "date": "Sat, 19 Sep 2026 23:15:20 GMT",
+      "via": "1.1 varnish",
+      "x-served-by": "cache-mxp6938-MXP",
+      "x-cache": "MISS",
+      "x-cache-hits": "0",
+      "x-timer": "S1789859720.000435,VS0,VE187",
+      "vary": "Authorization,Accept-Encoding",
+      "access-control-allow-origin": "*",
+      "cross-origin-resource-policy": "cross-origin",
+      "x-fastly-request-id": "c9f037a77f02fbcd9012a241c32d40e9094a4eec",
+      "expires": "Sat, 19 Sep 2026 23:20:20 GMT",
+      "source-age": "0"
+    },
+    "driver": "GTiff",
+    "width": 791,
+    "height": 718,
+    "bands": 3,
+    "band_indexes": [
+      1,
+      2,
+      3
+    ],
+    "dtypes": [
+      "uint8",
+      "uint8",
+      "uint8"
+    ],
+    "nodata": 0.0,
+    "crs": "EPSG:32618",
+    "transform": [
+      300.0379266750948,
+      0.0,
+      101985.0,
+      0.0,
+      -300.041782729805,
+      2826915.0
+    ],
+    "bounds": [
+      101985.0,
+      2611485.0,
+      339315.0,
+      2826915.0
+    ],
+    "resolution": [
+      300.0379266750948,
+      300.041782729805
+    ],
+    "color_interpretation": [
+      "3",
+      "4",
+      "5"
+    ],
+    "block_shapes": [
+      [
+        3,
+        791
+      ],
+      [
+        3,
+        791
+      ],
+      [
+        3,
+        791
+      ]
+    ],
+    "is_tiled": false
+  },
+  "license": {
+    "identifier": "BSD-3-Clause repository license",
+    "url": "https://raw.githubusercontent.com/rasterio/rasterio/d8d81ce1d04ca28abe8b94016d35b4337294b658/LICENSE.txt"
+  },
+  "selection": {
+    "policy": "four 128x128 source-pixel corner windows",
+    "count": 4
+  },
+  "native_path": "TorchGeo RasterDataset queried by a world-coordinate GeoSlice; exact pixel edges are moved one floating-point ULP inward to preserve the frozen closed-open pixel window under inverse-affine arithmetic",
+  "cvrs_path": "CVRS inspect_geotiff + inspect_raster + lossless native-window artifact wrapper; export_raw_window separately preserves direct source pixels",
+  "windows": [
+    {
+      "id": "window-0",
+      "window_col_row_width_height": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "world_bounds": [
+        101985.0,
+        2788509.651810585,
+        140389.85461441212,
+        2826915.0
+      ],
+      "torchgeo_query_bounds_inward_one_ulp": [
+        101985.00000000001,
+        2788509.6518105855,
+        140389.8546144121,
+        2826914.9999999995
+      ],
+      "native": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "presentation_dtype": "float32",
+        "source_dtype_view": "uint8",
+        "array_sha256": "40679c52cb3391c8a694aabcf1373d9ee0339e72877de433dd152b2586728918",
+        "source_value_sha256": "2aae7dc846aaf25f1cadf55f1666862046c6db9d65d84bdc07fa039dac405606",
+        "transform": [
+          300.0379333496094,
+          0.0,
+          101985.0,
+          0.0,
+          -300.0417785644531,
+          2826915.0
+        ],
+        "expected_float32_transform": [
+          300.0379333496094,
+          0.0,
+          101985.0,
+          0.0,
+          -300.0417785644531,
+          2826915.0
+        ]
+      },
+      "cvrs": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "dtype": "uint8",
+        "data_npy_sha256": "992179bccaedc1f70b6c2b64a97fc86f6459b4b9743d3402b022229c018a6ba5",
+        "valid_mask_npy_sha256": "dc48a88d699f6c2b7e050dd539979cd8d30edbe7cd2fef9c752ed6068fbd5179",
+        "source_value_sha256": "2aae7dc846aaf25f1cadf55f1666862046c6db9d65d84bdc07fa039dac405606",
+        "transform": [
+          300.0379266750948,
+          0.0,
+          101985.0,
+          0.0,
+          -300.041782729805,
+          2826915.0
+        ],
+        "bands": [
+          1,
+          2,
+          3
+        ]
+      },
+      "wrapped_native": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "dtype": "float32",
+        "data_npy_sha256": "40679c52cb3391c8a694aabcf1373d9ee0339e72877de433dd152b2586728918",
+        "valid_mask_npy_sha256": "dc48a88d699f6c2b7e050dd539979cd8d30edbe7cd2fef9c752ed6068fbd5179",
+        "source_sha256": "d7cbe932c7ed74a627706a9e9df99f706df3e5abc7d45a49e9d00677a6b09eb4",
+        "source_reference": {
+          "schema_version": "1.0",
+          "crs": "EPSG:32618",
+          "affine": [
+            300.0379266750948,
+            0.0,
+            101985.0,
+            0.0,
+            -300.041782729805,
+            2826915.0
+          ],
+          "pixel_reference": "corner",
+          "axis_order": "x_y",
+          "gsd_m": null
+        },
+        "output_reference": {
+          "schema_version": "1.0",
+          "crs": "EPSG:32618",
+          "affine": [
+            300.0379333496094,
+            0.0,
+            101985.0,
+            0.0,
+            -300.0417785644531,
+            2826915.0
+          ],
+          "pixel_reference": "corner",
+          "axis_order": "x_y",
+          "gsd_m": null
+        },
+        "window": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "nodata": 0.0
+      },
+      "comparison": {
+        "native_equals_cvrs_wrapped_native": true,
+        "native_dtype_preserved": true,
+        "native_shape_preserved": true,
+        "native_nodata_mask_preserved": true,
+        "native_affine_preserved": true,
+        "source_identity_preserved": true,
+        "window_and_bands_preserved": true,
+        "native_values_equal_direct_source_after_dtype_cast_diagnostic": true,
+        "transform_max_absolute_delta": 6.674514565929712e-06,
+        "transform_equal_after_documented_float32_cast": true,
+        "pixel_world_pixel_max_error": 1.3500311979441904e-13,
+        "nodata_mask_equal": true,
+        "bounds_equal": true
+      }
+    },
+    {
+      "id": "window-1",
+      "window_col_row_width_height": [
+        663,
+        0,
+        128,
+        128
+      ],
+      "world_bounds": [
+        300910.1453855878,
+        2788509.651810585,
+        339315.0,
+        2826915.0
+      ],
+      "torchgeo_query_bounds_inward_one_ulp": [
+        300910.1453855879,
+        2788509.6518105855,
+        339314.99999999994,
+        2826914.9999999995
+      ],
+      "native": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "presentation_dtype": "float32",
+        "source_dtype_view": "uint8",
+        "array_sha256": "dff745600957681c310b1a58c38198d3873eec4fd636e57234965194c4cc7294",
+        "source_value_sha256": "79f8afcd0cae6c45c2a44a989bef537a14f58280fc37f90b63fc820990256e56",
+        "transform": [
+          300.0379333496094,
+          0.0,
+          300910.15625,
+          0.0,
+          -300.0417785644531,
+          2826915.0
+        ],
+        "expected_float32_transform": [
+          300.0379333496094,
+          0.0,
+          300910.15625,
+          0.0,
+          -300.0417785644531,
+          2826915.0
+        ]
+      },
+      "cvrs": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "dtype": "uint8",
+        "data_npy_sha256": "0cdabeae550016a19daae60de7265ee3bbed78932917c4281096ada130675b74",
+        "valid_mask_npy_sha256": "0dbb417c6048ff54e8a27d7b0e983b549606a9c93c014e3c9c272d05853f0dd5",
+        "source_value_sha256": "6ee9cc0316384a966729afb62c7f8cf0abfdf042866e02364b2ae14a1393b909",
+        "transform": [
+          300.0379266750948,
+          0.0,
+          300910.1453855878,
+          0.0,
+          -300.041782729805,
+          2826915.0
+        ],
+        "bands": [
+          1,
+          2,
+          3
+        ]
+      },
+      "wrapped_native": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "dtype": "float32",
+        "data_npy_sha256": "dff745600957681c310b1a58c38198d3873eec4fd636e57234965194c4cc7294",
+        "valid_mask_npy_sha256": "f3b43b0d4df5d746b56d9e574a414d864450b2816b7f4d5d466ba5b2d7c9bbb1",
+        "source_sha256": "d7cbe932c7ed74a627706a9e9df99f706df3e5abc7d45a49e9d00677a6b09eb4",
+        "source_reference": {
+          "schema_version": "1.0",
+          "crs": "EPSG:32618",
+          "affine": [
+            300.0379266750948,
+            0.0,
+            101985.0,
+            0.0,
+            -300.041782729805,
+            2826915.0
+          ],
+          "pixel_reference": "corner",
+          "axis_order": "x_y",
+          "gsd_m": null
+        },
+        "output_reference": {
+          "schema_version": "1.0",
+          "crs": "EPSG:32618",
+          "affine": [
+            300.0379333496094,
+            0.0,
+            300910.15625,
+            0.0,
+            -300.0417785644531,
+            2826915.0
+          ],
+          "pixel_reference": "corner",
+          "axis_order": "x_y",
+          "gsd_m": null
+        },
+        "window": [
+          663,
+          0,
+          128,
+          128
+        ],
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "nodata": 0.0
+      },
+      "comparison": {
+        "native_equals_cvrs_wrapped_native": true,
+        "native_dtype_preserved": true,
+        "native_shape_preserved": true,
+        "native_nodata_mask_preserved": true,
+        "native_affine_preserved": true,
+        "source_identity_preserved": true,
+        "window_and_bands_preserved": true,
+        "native_values_equal_direct_source_after_dtype_cast_diagnostic": false,
+        "transform_max_absolute_delta": 0.010864412179216743,
+        "transform_equal_after_documented_float32_cast": true,
+        "pixel_world_pixel_max_error": 1.3500311979441904e-13,
+        "nodata_mask_equal": true,
+        "bounds_equal": true
+      }
+    },
+    {
+      "id": "window-2",
+      "window_col_row_width_height": [
+        0,
+        590,
+        128,
+        128
+      ],
+      "world_bounds": [
+        101985.0,
+        2611485.0,
+        140389.85461441212,
+        2649890.348189415
+      ],
+      "torchgeo_query_bounds_inward_one_ulp": [
+        101985.00000000001,
+        2611485.0000000005,
+        140389.8546144121,
+        2649890.3481894145
+      ],
+      "native": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "presentation_dtype": "float32",
+        "source_dtype_view": "uint8",
+        "array_sha256": "ebd071d930f49beb9bc9c80aa913ec93484c0e6335e6368997d5d7d9f7792602",
+        "source_value_sha256": "8b5341d8c33655ac50567e8619140919553d68ac47f4386e04ad826b8922ffba",
+        "transform": [
+          300.0379333496094,
+          0.0,
+          101985.0,
+          0.0,
+          -300.0417785644531,
+          2649890.25
+        ],
+        "expected_float32_transform": [
+          300.0379333496094,
+          0.0,
+          101985.0,
+          0.0,
+          -300.0417785644531,
+          2649890.25
+        ]
+      },
+      "cvrs": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "dtype": "uint8",
+        "data_npy_sha256": "75f4d1c83818639e0ee49f60dab2ca1718b8f872524d5d86c4df92801f3885cd",
+        "valid_mask_npy_sha256": "6033f6850894a9e1a3a1770f38c604d1378ecf2c2354a7eca2bdea80aa2ed237",
+        "source_value_sha256": "2b2c14cb4b7d2a65f675813bb31806966c6231e3d34a3b5b32b756bf63e5163a",
+        "transform": [
+          300.0379266750948,
+          0.0,
+          101985.0,
+          0.0,
+          -300.041782729805,
+          2649890.348189415
+        ],
+        "bands": [
+          1,
+          2,
+          3
+        ]
+      },
+      "wrapped_native": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "dtype": "float32",
+        "data_npy_sha256": "ebd071d930f49beb9bc9c80aa913ec93484c0e6335e6368997d5d7d9f7792602",
+        "valid_mask_npy_sha256": "82bca0f48bf94301e987501a5c27f2f7523cad302b6baf3bc4317bee82197be6",
+        "source_sha256": "d7cbe932c7ed74a627706a9e9df99f706df3e5abc7d45a49e9d00677a6b09eb4",
+        "source_reference": {
+          "schema_version": "1.0",
+          "crs": "EPSG:32618",
+          "affine": [
+            300.0379266750948,
+            0.0,
+            101985.0,
+            0.0,
+            -300.041782729805,
+            2826915.0
+          ],
+          "pixel_reference": "corner",
+          "axis_order": "x_y",
+          "gsd_m": null
+        },
+        "output_reference": {
+          "schema_version": "1.0",
+          "crs": "EPSG:32618",
+          "affine": [
+            300.0379333496094,
+            0.0,
+            101985.0,
+            0.0,
+            -300.0417785644531,
+            2649890.25
+          ],
+          "pixel_reference": "corner",
+          "axis_order": "x_y",
+          "gsd_m": null
+        },
+        "window": [
+          0,
+          590,
+          128,
+          128
+        ],
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "nodata": 0.0
+      },
+      "comparison": {
+        "native_equals_cvrs_wrapped_native": true,
+        "native_dtype_preserved": true,
+        "native_shape_preserved": true,
+        "native_nodata_mask_preserved": true,
+        "native_affine_preserved": true,
+        "source_identity_preserved": true,
+        "window_and_bands_preserved": true,
+        "native_values_equal_direct_source_after_dtype_cast_diagnostic": false,
+        "transform_max_absolute_delta": 0.09818941494449973,
+        "transform_equal_after_documented_float32_cast": true,
+        "pixel_world_pixel_max_error": 2.2737367544323206e-13,
+        "nodata_mask_equal": true,
+        "bounds_equal": true
+      }
+    },
+    {
+      "id": "window-3",
+      "window_col_row_width_height": [
+        663,
+        590,
+        128,
+        128
+      ],
+      "world_bounds": [
+        300910.1453855878,
+        2611485.0,
+        339315.0,
+        2649890.348189415
+      ],
+      "torchgeo_query_bounds_inward_one_ulp": [
+        300910.1453855879,
+        2611485.0000000005,
+        339314.99999999994,
+        2649890.3481894145
+      ],
+      "native": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "presentation_dtype": "float32",
+        "source_dtype_view": "uint8",
+        "array_sha256": "40679c52cb3391c8a694aabcf1373d9ee0339e72877de433dd152b2586728918",
+        "source_value_sha256": "2aae7dc846aaf25f1cadf55f1666862046c6db9d65d84bdc07fa039dac405606",
+        "transform": [
+          300.0379333496094,
+          0.0,
+          300910.15625,
+          0.0,
+          -300.0417785644531,
+          2649890.25
+        ],
+        "expected_float32_transform": [
+          300.0379333496094,
+          0.0,
+          300910.15625,
+          0.0,
+          -300.0417785644531,
+          2649890.25
+        ]
+      },
+      "cvrs": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "dtype": "uint8",
+        "data_npy_sha256": "992179bccaedc1f70b6c2b64a97fc86f6459b4b9743d3402b022229c018a6ba5",
+        "valid_mask_npy_sha256": "dc48a88d699f6c2b7e050dd539979cd8d30edbe7cd2fef9c752ed6068fbd5179",
+        "source_value_sha256": "2aae7dc846aaf25f1cadf55f1666862046c6db9d65d84bdc07fa039dac405606",
+        "transform": [
+          300.0379266750948,
+          0.0,
+          300910.1453855878,
+          0.0,
+          -300.041782729805,
+          2649890.348189415
+        ],
+        "bands": [
+          1,
+          2,
+          3
+        ]
+      },
+      "wrapped_native": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "dtype": "float32",
+        "data_npy_sha256": "40679c52cb3391c8a694aabcf1373d9ee0339e72877de433dd152b2586728918",
+        "valid_mask_npy_sha256": "dc48a88d699f6c2b7e050dd539979cd8d30edbe7cd2fef9c752ed6068fbd5179",
+        "source_sha256": "d7cbe932c7ed74a627706a9e9df99f706df3e5abc7d45a49e9d00677a6b09eb4",
+        "source_reference": {
+          "schema_version": "1.0",
+          "crs": "EPSG:32618",
+          "affine": [
+            300.0379266750948,
+            0.0,
+            101985.0,
+            0.0,
+            -300.041782729805,
+            2826915.0
+          ],
+          "pixel_reference": "corner",
+          "axis_order": "x_y",
+          "gsd_m": null
+        },
+        "output_reference": {
+          "schema_version": "1.0",
+          "crs": "EPSG:32618",
+          "affine": [
+            300.0379333496094,
+            0.0,
+            300910.15625,
+            0.0,
+            -300.0417785644531,
+            2649890.25
+          ],
+          "pixel_reference": "corner",
+          "axis_order": "x_y",
+          "gsd_m": null
+        },
+        "window": [
+          663,
+          590,
+          128,
+          128
+        ],
+        "bands": [
+          1,
+          2,
+          3
+        ],
+        "nodata": 0.0
+      },
+      "comparison": {
+        "native_equals_cvrs_wrapped_native": true,
+        "native_dtype_preserved": true,
+        "native_shape_preserved": true,
+        "native_nodata_mask_preserved": true,
+        "native_affine_preserved": true,
+        "source_identity_preserved": true,
+        "window_and_bands_preserved": true,
+        "native_values_equal_direct_source_after_dtype_cast_diagnostic": true,
+        "transform_max_absolute_delta": 0.09818941494449973,
+        "transform_equal_after_documented_float32_cast": true,
+        "pixel_world_pixel_max_error": 2.2737367544323206e-13,
+        "nodata_mask_equal": true,
+        "bounds_equal": true
+      }
+    }
+  ],
+  "environment": {
+    "torch": "2.14.0+cpu",
+    "torchvision": "0.29.0+cpu",
+    "torchgeo": "0.10.0",
+    "rasterio": "1.5.1",
+    "numpy": "2.5.3",
+    "pydantic": "2.11.9"
+  },
+  "torchgeo_module_version": "0.10.0",
+  "controls": {
+    "training": false,
+    "model_downloads": false,
+    "gpu": false,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "source_deleted_with_ephemeral_container": true
+  },
+  "runtime_seconds": 0.44729762999999956,
+  "limits": [
+    "This is a geospatial provenance/interoperability qualification, not a model result.",
+    "TorchGeo presents image tensors as float32; equality is checked only after an explicit cast back to the locked uint8 source dtype.",
+    "TorchGeo returns its affine as a float32 tensor; affine equality requires exact equality to the CVRS float64 affine after an explicit float32 representation cast.",
+    "The direct source-pixel window and TorchGeo's world-grid merge differ at a small number of nodata-boundary values on this non-integer affine; this diagnostic is disclosed but is not a CVRS transport mutation.",
+    "No derived RGB display artifact was needed because the source is already a three-band RGB test raster.",
+    "Repository-level licensing is recorded; upstream Landsat scene ancestry is not inferred."
+  ]
+}

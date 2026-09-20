@@ -1,0 +1,41 @@
+{
+  "id": "uav-synthscene-2026",
+  "title": "Bridging the Sim2Real Gap in UAV Remote Sensing: A High-Fidelity Synthetic Data Framework for Vehicle Detection",
+  "source_urls": [
+    "https://doi.org/10.3390/rs18020361"
+  ],
+  "repositories": [],
+  "frameworks": [
+    "mmdetection",
+    "ultralytics",
+    "unreal",
+    "colosseum"
+  ],
+  "tasks": [
+    "hbb_detection",
+    "synthetic_data"
+  ],
+  "assets": [
+    {
+      "id": "uav-real-scene",
+      "kind": "dataset",
+      "license_status": "UNKNOWN"
+    },
+    {
+      "id": "uav-synth-scene",
+      "kind": "dataset",
+      "license_status": "UNKNOWN"
+    }
+  ],
+  "commands": {},
+  "integration_boundary": "independent_stages",
+  "status": "CANDIDATE",
+  "limitations": [
+    "External work by Fuping Liao and colleagues, not this project owner's paper.",
+    "Paper describes separate generation and detector stages; this recipe does not include their renderer, assets, trained weights or data.",
+    "No verified public code checkout is bound here. This is an attributed experiment archetype, not an executable reproduction."
+  ],
+  "schema_version": "1.0",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19"
+}

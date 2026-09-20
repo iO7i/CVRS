@@ -1,0 +1,46 @@
+{
+  "name": "Reproduction discrepancy",
+  "description": "Reproduction discrepancy with reproducible context",
+  "body": [
+    {
+      "type": "textarea",
+      "id": "field-0",
+      "attributes": {
+        "label": "Claim and capsule identities"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-1",
+      "attributes": {
+        "label": "Attempt and protocol identities"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-2",
+      "attributes": {
+        "label": "Observed delta or blocker"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "field-3",
+      "attributes": {
+        "label": "Public shareable evidence"
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

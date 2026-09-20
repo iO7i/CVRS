@@ -1,0 +1,1 @@
+{"edge_policy":"anchor_last_crop","height":48,"max_source_pixels":100000000,"max_tiles":100,"merge":"class_aware_greedy_nms","merge_iou":0.5,"overlap_x":16,"overlap_y":16,"pad_to_tile":true,"padding_prediction_policy":"clip_to_valid_region","padding_rgb":[0,0,0],"resize_height":null,"resize_method":"bilinear","resize_width":null,"schema_version":"1.0","width":48}

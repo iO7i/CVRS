@@ -1,0 +1,189 @@
+{
+  "schema": "cvrs.rq002.mmdet3-rtmdet.v1",
+  "status": "FAIL_MMDET3_RTMDET_NATIVE_AND_CVRS",
+  "assets": {
+    "schema": "cvrs.rq002.model-lane-lock.v1",
+    "status": "FROZEN_BEFORE_INFERENCE",
+    "lane": "OML-MODERN",
+    "model": "RTMDet-tiny",
+    "mmdetection_version": "3.3.0",
+    "mmdetection_revision": "44ebd17b145c2372c4b700bfb9cb20dbd28ab64a",
+    "source_url": "https://codeload.github.com/open-mmlab/mmdetection/tar.gz/44ebd17b145c2372c4b700bfb9cb20dbd28ab64a",
+    "source_sha256": "0f458c4f5ae7914b24dba69e5297a8f6bde2586889c889227678c68497f270ca",
+    "config_relative_path": "configs/rtmdet/rtmdet_tiny_8xb32-300e_coco.py",
+    "config_sha256": "873923f8221c2e5ae6501dae248eddf26743daeccb82ae9055cb6435fcabc992",
+    "checkpoint_url": "https://download.openmmlab.com/mmdetection/v3.0/rtmdet/rtmdet_tiny_8xb32-300e_coco/rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth",
+    "checkpoint_sha256": "78e30dcce0c6f594eaff0d6977b84b4103688b4aff0ad1aa16008a8cc854a7fb",
+    "checkpoint_bytes": 57532893,
+    "license": {
+      "identifier": "Apache-2.0",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmdetection/44ebd17b145c2372c4b700bfb9cb20dbd28ab64a/LICENSE",
+      "sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1"
+    },
+    "environment": {
+      "python": "3.10",
+      "torch": "2.1.2+cu121",
+      "torchvision": "0.16.2+cu121",
+      "mmcv": "2.1.0",
+      "mmengine": "0.10.7",
+      "mmdet": "3.3.0",
+      "numpy": "1.26.4",
+      "gpu": "T4"
+    },
+    "inputs": [
+      {
+        "id": "139",
+        "file_name": "000000000139.jpg",
+        "sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d"
+      },
+      {
+        "id": "285",
+        "file_name": "000000000285.jpg",
+        "sha256": "f3a2974ce3686332609124c70e3e6a2e3aca43fccf1cd1bd7c5c03820977f57d"
+      }
+    ],
+    "comparison": {
+      "labels_and_order": "exact",
+      "boxes_atol": 1e-06,
+      "scores_atol": 1e-07,
+      "rtol": 0.0
+    },
+    "controls": {
+      "training": false,
+      "maximum_images": 2,
+      "gpu_concurrency": 1,
+      "storage": "ephemeral Modal container",
+      "protected_data_access": 0,
+      "sealed_test_access": 0
+    }
+  },
+  "images": [
+    {
+      "id": "139",
+      "file_name": "000000000139.jpg",
+      "url": "http://images.cocodataset.org/val2017/000000000139.jpg",
+      "sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+      "width": 640,
+      "height": 426
+    },
+    {
+      "id": "285",
+      "file_name": "000000000285.jpg",
+      "url": "http://images.cocodataset.org/val2017/000000000285.jpg",
+      "sha256": "f3a2974ce3686332609124c70e3e6a2e3aca43fccf1cd1bd7c5c03820977f57d",
+      "width": 586,
+      "height": 640
+    }
+  ],
+  "native": {
+    "images": 2,
+    "detections": 600,
+    "sha256": "a31f9fd1196f26a432858398c5d8020c68f2cd16f539477b995ba6cb82bf41b0"
+  },
+  "saved_native_conversion": {
+    "status": "FAIL",
+    "report": null,
+    "error": "CVRSError: missing declared image: 000000000139.jpg"
+  },
+  "wrapped_execution": {
+    "response": {
+      "error": null,
+      "protocol_version": "1.0",
+      "result": {
+        "actual_source_identity": {
+          "git_remote": null,
+          "git_sha": null,
+          "source_path": "/usr/local/lib/python3.10/site-packages/mmdet/__init__.py",
+          "verified_from_git": false
+        },
+        "checkpoint_sha256": "78e30dcce0c6f594eaff0d6977b84b4103688b4aff0ad1aa16008a8cc854a7fb",
+        "config_graph_sha256": "81270c9641687a3ae0e63f84819d8d4102dba3ff7d3afb4a8203f9f201c9fac5",
+        "environment": {
+          "cuda_visible_devices": null,
+          "mmcv": "2.1.0",
+          "mmdet": "3.3.0",
+          "mmdet_source": {
+            "git_remote": null,
+            "git_sha": null,
+            "source_path": "/usr/local/lib/python3.10/site-packages/mmdet/__init__.py",
+            "verified_from_git": false
+          },
+          "mmengine": "0.10.7",
+          "platform": "linux",
+          "python": "3.10.17",
+          "python_executable": "/usr/local/bin/python",
+          "torch": "2.1.2+cu121"
+        },
+        "evidence_artifacts": [
+          "resolved_config.py.txt",
+          "config_graph.json",
+          "upstream_predictions.jsonl",
+          "predictions.jsonl",
+          "conversion_audit.json",
+          "heritage_execution.json"
+        ],
+        "heritage_level": "H3_OUTPUT_PARITY_VERIFIED",
+        "nonclaims": [
+          "No published model-zoo metric reproduction unless separately evaluated on exact reference data/protocol",
+          "No heritage training reproduction",
+          "Source repository revision is independently verified only when a Git checkout is discoverable"
+        ],
+        "representation_arrays_exact": true,
+        "resolved_config_sha256": "1b058a2b86927f3bc3ed47d84ec5ea65aef6c998aa44d8df60c14bd2ee37c3b3",
+        "revision_claim": "44ebd17b145c2372c4b700bfb9cb20dbd28ab64a",
+        "revision_match": null,
+        "status": "OUTPUT_PARITY_VERIFIED",
+        "upstream_claim": "open-mmlab/mmdetection"
+      },
+      "schema_version": "1.0",
+      "status": "SUCCEEDED"
+    },
+    "repeatability": [
+      {
+        "sample_id": "139",
+        "labels_and_order_exact": true,
+        "boxes_atol_1e_6": true,
+        "scores_atol_1e_7": true
+      },
+      {
+        "sample_id": "285",
+        "labels_and_order_exact": true,
+        "boxes_atol_1e_6": true,
+        "scores_atol_1e_7": true
+      }
+    ],
+    "repeatability_pass": true
+  },
+  "environment": {
+    "python": "3.10.17 (main, May 21 2025, 23:32:05) [GCC 12.2.0]",
+    "torch": "2.1.2+cu121",
+    "cuda_runtime": "12.1",
+    "cuda_device": "Tesla T4",
+    "mmdet": "3.3.0",
+    "mmcv": "2.1.0",
+    "mmengine": "0.10.7",
+    "numpy": "1.26.4",
+    "packages": {
+      "torchvision": "0.16.2+cu121",
+      "pydantic": "2.11.9"
+    }
+  },
+  "criteria": {
+    "box_atol": 1e-06,
+    "score_atol": 1e-07,
+    "label_and_order": "exact"
+  },
+  "controls": {
+    "training": false,
+    "optimizer_steps": 0,
+    "checkpoint_writes": 0,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "gpu_concurrency": 1
+  },
+  "runtime_seconds": 17.18709946,
+  "limits": [
+    "Two-image interoperability smoke only; no accuracy or COCO metric claim.",
+    "Native output is preserved before either CVRS conversion path."
+  ]
+}

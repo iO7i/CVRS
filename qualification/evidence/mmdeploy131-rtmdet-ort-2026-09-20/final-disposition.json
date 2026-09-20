@@ -1,0 +1,27 @@
+{
+  "schema": "cvrs.rq002.mmdeploy-rtmdet-ort-disposition.v1",
+  "status": "FAIL_CVRS_DEPLOYMENT_FIDELITY",
+  "source_report": "qualification-attempt-02/report.json",
+  "comparison": "qualification-attempt-02/native-comparison.json",
+  "export": "PASS_ONNX_CHECKER",
+  "onnxruntime_execution": "PASS_CPU",
+  "runtime_repeatability": "PASS_EXACT_TWO_RUNS",
+  "transport_fidelity": "FAIL_ORDER_AND_COORDINATE_PARITY",
+  "conversion_fidelity": "FAIL_STRICT_CANONICAL_BOUNDS_22_OF_300",
+  "evaluator_equivalence": "NOT_RUN_NO_GROUND_TRUTH",
+  "artifacts": {
+    "onnx_sha256": "bcd627e7599005952fbc6d0d73f9e42bb5d4524cb375a1e6aa1fa3656d0b076e",
+    "onnxruntime_outputs_npz_sha256": "23a68250a40a6ccde4c9d227bbf18157e3412c86746e2824799d36dc810f1a9b",
+    "onnxruntime_input_npy_sha256": "d56a9add164f117e45ad78935d61eaa170350d9e6ba115a722e981cf4e205924"
+  },
+  "preserved_failures": ["attempt-01-ort-input-contract-failure.json"],
+  "controls": {
+    "training": false,
+    "native_gpu_inference_rerun": false,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "gpu_concurrency": 0,
+    "geometry_modification": "NONE"
+  },
+  "interpretation": "The pinned exporter and ONNX Runtime execute repeatably, but the exported path is not transport-equivalent to the preserved native path and its raw geometry fails the strict canonical bounds contract."
+}

@@ -1,0 +1,11 @@
+{
+  "purpose": "research",
+  "notes": "Replace argv and input paths with the actual native repository contract. No command is inferred as safe.",
+  "inputs": {"image": "/replace/with/approved/input.png"},
+  "operations": {
+    "predict": {
+      "argv": ["${python}", "${repo}/infer.py", "--image", "${inputs.image}", "--out", "${output}"],
+      "outputs": {"predictions": {"path": "predictions.jsonl", "kind": "cvrs_hbb"}}
+    }
+  }
+}

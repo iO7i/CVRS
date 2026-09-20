@@ -1,0 +1,19 @@
+{
+  "catalogue_schema": "1",
+  "model": "TOOD R50 FPN 1x COCO",
+  "task": "hbb_detection",
+  "upstream": "open-mmlab/mmdetection",
+  "config_path": "configs/tood/tood_r50_fpn_1x_coco.py",
+  "upstream_release_family": "MMDetection",
+  "compatibility_level": "H0_CATALOGUED",
+  "checkpoint": {
+    "reference": null,
+    "sha256": null,
+    "license": "unknown",
+    "redistribution": "unknown"
+  },
+  "reference_dataset": "COCO when exact checkpoint/config reference is selected",
+  "reported_metrics": {},
+  "execution_evidence": null,
+  "note": "Catalogue seed only. No checkpoint/revision/metric is invented or certified in this release."
+}

@@ -1,0 +1,60 @@
+{
+  "id": "deim",
+  "title": "DEIM: DETR with Improved Matching for Fast Convergence",
+  "source_urls": [
+    "https://github.com/Intellindust-AI-Lab/DEIM"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/Intellindust-AI-Lab/DEIM",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "pytorch"
+  ],
+  "tasks": [
+    "hbb_detection"
+  ],
+  "assets": [
+    {
+      "id": "coco",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "checkpoint",
+      "kind": "weights",
+      "license_status": "REVIEW_REQUIRED"
+    }
+  ],
+  "commands": {
+    "evaluate_candidate": [
+      "${python}",
+      "train.py",
+      "-c",
+      "${config}",
+      "--test-only",
+      "-r",
+      "${checkpoint}"
+    ],
+    "export_candidate": [
+      "${python}",
+      "tools/deployment/export_onnx.py",
+      "--check",
+      "-c",
+      "${config}",
+      "-r",
+      "${checkpoint}"
+    ]
+  },
+  "integration_boundary": "whole_environment",
+  "status": "SOURCE_INSPECTED",
+  "limitations": [
+    "Native YAML config/trainer retained. Source documents distributed launch; adapt the reviewed launcher to available hardware.",
+    "Native output harvesting requires explicit paths. No automatic conversion of an unknown evaluation checkpoint into predictions."
+  ],
+  "schema_version": "1.0",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19"
+}

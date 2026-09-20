@@ -1,0 +1,31 @@
+{
+  "backend": "hf_grounding_dino",
+  "model_dir": "REPLACE_WITH_LOCAL_DIRECTORY",
+  "model_files": {
+    "model.safetensors": "REPLACE_WITH_SHA256",
+    "config.json": "REPLACE_WITH_SHA256",
+    "preprocessor_config.json": "REPLACE_WITH_SHA256"
+  },
+  "images": [
+    {
+      "id": "image-1",
+      "path": "REPLACE_IMAGE_PATH",
+      "sha256": "REPLACE_WITH_SHA256",
+      "split_role": "dev"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "query-1",
+      "sample_id": "image-1",
+      "kind": "text",
+      "text": "a car. a truck.",
+      "source": "fixed_protocol"
+    }
+  ],
+  "config": {
+    "device": "cpu",
+    "threshold": 0.25
+  },
+  "purpose": "research"
+}

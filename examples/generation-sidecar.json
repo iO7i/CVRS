@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "simulator": "generic-fixture-generator",
+  "simulator_version": "1",
+  "engine": null,
+  "engine_version": null,
+  "generation_revision": "example-not-live-integration",
+  "scene_id": "example-scene",
+  "asset_ids": [
+    "vehicle-fixture-01"
+  ],
+  "seed": 17,
+  "units": {
+    "altitude": "metres",
+    "sun_elevation": "degrees",
+    "ground_sampling_distance": "metres_per_pixel"
+  },
+  "coordinate_convention": "illustrative schema only; no tested engine mapping",
+  "planned": {
+    "altitude": 100.0,
+    "sun_elevation": 25.0,
+    "weather": "clear"
+  },
+  "observed": {},
+  "occlusion_fraction": null,
+  "truncation_fraction": null,
+  "visibility_definition": null,
+  "annotation_method": "illustrative simulator-neutral sidecar; no live simulator run"
+}

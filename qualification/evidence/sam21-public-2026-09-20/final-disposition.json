@@ -1,0 +1,38 @@
+{
+  "schema": "cvrs.rq002.sam21-public-final-disposition.v1",
+  "status": "FAIL_NATIVE_RUNTIME_COMPATIBILITY",
+  "claim_boundary": "SAM 2.1 Hiera Tiny public fallback only; not SAM 3 qualification",
+  "acquisition": {
+    "status": "PASS_PUBLIC_UNGATED_FROZEN_ASSETS",
+    "evidence": "qualification/evidence/sam21-public-2026-09-20/acquisition.json",
+    "evidence_sha256": "cf36db27a628d8fcde34a4757322e47cdc69400861e7341e070843a995889101",
+    "checkpoint_sha256": "48c14467e5cf9e51870511feb72c89688e82dd74523142c0538b663e193ac2a7"
+  },
+  "execution": {
+    "modal_run_id": "ap-raxDKgtSXdheBUK1GegiRe",
+    "model_forward": "COMPLETED_BEFORE_FAILURE",
+    "native_mask_postprocess": "FAIL",
+    "cvrs_conversion": "NOT_REACHED",
+    "error_type": "RuntimeError",
+    "error": "The size of tensor a (640) must match the size of tensor b (2) at non-singleton dimension 3",
+    "failure_site": "transformers.models.sam2.image_processing_sam2_fast.post_process_masks",
+    "configuration_warning": "checkpoint model_type sam2_video instantiated through Sam2Model/sam2",
+    "output_artifact_returned": false
+  },
+  "inputs": {
+    "images": 2,
+    "frozen_prompt_boxes": 21,
+    "selection_sha256": "620c908fd17ec701f3fb8771c35e439eeee54223e0f213dbf8017172194d16c2",
+    "geometry_clipped_or_rewritten": false
+  },
+  "controls": {
+    "training": false,
+    "optimizer_steps": 0,
+    "protected_data_access": 0,
+    "sealed_test_access": 0,
+    "automatic_paid_retry": false,
+    "retry_performed": false
+  },
+  "cost_usd": 0.00824172,
+  "interpretation": "The public assets and GPU model forward were reachable, but the frozen Transformers 4.57.1 spatial-prompt path did not produce returnable native masks because its postprocessor failed on output/original-size broadcasting. This is a runtime/API interoperability failure, not evidence about mask quality."
+}

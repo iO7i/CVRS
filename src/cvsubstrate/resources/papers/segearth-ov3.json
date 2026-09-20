@@ -1,0 +1,51 @@
+{
+  "id": "segearth-ov3",
+  "title": "SegEarth-OV3: Exploring SAM 3 for Open-Vocabulary Semantic Segmentation in Remote Sensing Images",
+  "source_urls": [
+    "https://github.com/earth-insights/SegEarth-OV-3",
+    "https://arxiv.org/abs/2512.08730"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/earth-insights/SegEarth-OV-3",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "mmsegmentation",
+    "mmcv",
+    "sam3"
+  ],
+  "tasks": [
+    "semantic_segmentation"
+  ],
+  "assets": [
+    {
+      "id": "sam3",
+      "kind": "weights",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "dataset",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    }
+  ],
+  "commands": {
+    "evaluate_candidate": [
+      "${python}",
+      "eval.py",
+      "${config}"
+    ]
+  },
+  "integration_boundary": "requires_author_refactor",
+  "status": "SOURCE_INSPECTED",
+  "limitations": [
+    "SAM3 is used inside the segmentor. Separate workers do not automatically repair that shared-model dependency conflict.",
+    "Wrap the complete working native environment; split stages only after an explicit author-supported materialized boundary.",
+    "Semantic class maps must not be converted into instance masks to reuse an incompatible evaluator."
+  ],
+  "schema_version": "1.0",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19"
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "cvrs.reference-qualification.v1",
+  "id": "CVRS_REFERENCE_002",
+  "title": "Cross-Generation CV Interoperability",
+  "status": "ACTIVE_PARTIALLY_EXECUTED_NOT_QUALIFIED",
+  "reference_001_immutable": true,
+  "reference_001_sha256": "9a78304c98712367384bbce0cc4693d55c6b3130d3ee41a2c52af0f5aeaef55c",
+  "constraints": {
+    "paid_compute_authorized": false,
+    "large_downloads_authorized": false,
+    "gated_model_access_authorized": false,
+    "mock_outputs_satisfy_native_gate": false,
+    "silent_geometry_normalization_allowed": false,
+    "protected_data_allowed": false,
+    "native_reference_required": true
+  },
+  "human_gates": {
+    "H0": "APPROVED_TIERED_LOCAL_FIRST",
+    "H1": "APPROVED_LOCAL_SDK_SCOPE_ONLY",
+    "H2": "REQUIRED_BEFORE_ALPHA_FREEZE"
+  },
+  "datasets": [
+    {"id": "coco2017-val", "max_samples": 128, "selection": "DETERMINISTIC_FROZEN_SUBSETS", "status": "PARTIAL_PINNED"},
+    {"id": "open-images-v7", "max_samples": 64, "selection": "DETERMINISTIC_UNFROZEN", "status": "UNLOCKED"},
+    {"id": "ade20k", "max_samples": 32, "selection": "DETERMINISTIC_UNFROZEN", "status": "UNLOCKED"},
+    {"id": "dota", "max_samples": 16, "max_tiles": 64, "selection": "DETERMINISTIC_UNFROZEN", "status": "UNLOCKED"},
+    {"id": "geospatial-aoi", "max_windows": 16, "selection": "FOUR_PINNED_PUBLIC_WINDOWS", "status": "PASS"}
+  ],
+  "lanes": [
+    {"id": "OML-LEGACY", "pack": "mmdetection2", "mandatory": true, "data": "coco2017-val", "status": "UNLOCKED"},
+    {"id": "OML-MODERN", "pack": "mmdetection3", "mandatory": true, "data": "coco2017-val", "status": "FAIL"},
+    {"id": "OML-ROTATED", "pack": "mmrotate", "mandatory": true, "data": "dota", "status": "UNLOCKED"},
+    {"id": "OML-SEG", "pack": "mmseg1", "mandatory": true, "data": "ade20k", "status": "UNLOCKED"},
+    {"id": "OML-DEPLOY", "pack": "mmdeploy", "mandatory": true, "data": "coco2017-val", "status": "UNLOCKED"},
+    {"id": "ULTRALYTICS", "pack": "ultralytics", "mandatory": true, "data": "coco2017-val", "status": "UNLOCKED"},
+    {"id": "GROUNDING", "pack": "grounding-dino", "mandatory": true, "data": "coco2017-val", "status": "UNLOCKED"},
+    {"id": "SAM3", "pack": "sam3", "mandatory": true, "data": "coco2017-val", "status": "UNLOCKED"},
+    {"id": "DINOV3", "pack": "dinov3", "mandatory": true, "data": "coco2017-val", "status": "UNLOCKED"},
+    {"id": "TORCHGEO", "pack": "torchgeo", "mandatory": true, "data": "geospatial-aoi", "status": "PASS"},
+    {"id": "SUPERVISION", "pack": "bridge-supervision", "mandatory": true, "data": "coco2017-val", "status": "PASS"},
+    {"id": "FIFTYONE", "pack": "bridge-fiftyone", "mandatory": true, "data": "coco2017-val", "status": "PASS"},
+    {"id": "CLEANROOM", "pack": "core", "mandatory": true, "data": "portable-capsule", "status": "UNLOCKED"}
+  ],
+  "gates": [
+    {"id": "R2.01", "requirement": "dataset bytes IDs and rights metadata pinned", "status": "PARTIAL"},
+    {"id": "R2.02", "requirement": "model source revisions and checkpoint hashes pinned", "status": "PARTIAL"},
+    {"id": "R2.03", "requirement": "native environments independently reconstructable", "status": "PARTIAL"},
+    {"id": "R2.04", "requirement": "MMDetection 2 native reference and CVRS paths executed", "status": "NOT_RUN"},
+    {"id": "R2.05", "requirement": "MMDetection 3 native reference and CVRS paths executed", "status": "FAIL_CVRS_GEOMETRY_BOUNDS_NATIVE_AND_WRAPPED_EXECUTED"},
+    {"id": "R2.06", "requirement": "MMRotate native OBB reference and CVRS paths executed", "status": "NOT_RUN"},
+    {"id": "R2.07", "requirement": "MMSegmentation native semantic reference and CVRS paths executed", "status": "NOT_RUN"},
+    {"id": "R2.08", "requirement": "Grounding DINO native reference and CVRS paths executed", "status": "NOT_RUN"},
+    {"id": "R2.09", "requirement": "SAM 3 native masks and declared prompt path executed", "status": "NOT_RUN"},
+    {"id": "R2.10", "requirement": "DINOv3 feature artifacts executed and verified", "status": "NOT_RUN"},
+    {"id": "R2.11", "requirement": "TorchGeo real raster lineage executed and verified", "status": "PASS_REAL_PUBLIC_RASTER_NATIVE_AND_CVRS_LINEAGE"},
+    {"id": "R2.12", "requirement": "Grounding DINO to SAM 3 detached composition verified", "status": "NOT_RUN"},
+    {"id": "R2.13", "requirement": "Ultralytics to SAM 3 detached composition verified", "status": "NOT_RUN"},
+    {"id": "R2.14", "requirement": "MMDeploy ONNX Runtime fidelity measured", "status": "NOT_RUN"},
+    {"id": "R2.15", "requirement": "MMDeploy TensorRT fidelity measured or explicitly BLOCKED_EXTERNAL", "status": "NOT_RUN"},
+    {"id": "R2.16", "requirement": "Ultralytics ONNX fidelity measured", "status": "NOT_RUN"},
+    {"id": "R2.17", "requirement": "Supervision native SDK roundtrip verified", "status": "PASS_HBB_NATIVE_AND_CVRS_PATH"},
+    {"id": "R2.18", "requirement": "FiftyOne native SDK roundtrip verified", "status": "PASS_HBB_NATIVE_AND_CVRS_PATH_MASK_FIDELITY_NOT_CLAIMED"},
+    {"id": "R2.19", "requirement": "native and canonical geometry dispositions have zero silent loss", "status": "PARTIAL_HBB_ZERO_SILENT_LOSS_OTHER_LANES_PENDING"},
+    {"id": "R2.20", "requirement": "prompt provenance and dataset-level vocabulary frozen", "status": "NOT_RUN"},
+    {"id": "R2.21", "requirement": "artifact-only reevaluation succeeds where semantics are representable", "status": "NOT_RUN"},
+    {"id": "R2.22", "requirement": "portable qualification capsule verifies in clean controller", "status": "NOT_RUN"},
+    {"id": "R2.23", "requirement": "tamper probes are rejected", "status": "NOT_RUN"},
+    {"id": "R2.24", "requirement": "missing evidence degrades to INCOMPLETE rather than VERIFIED", "status": "NOT_RUN"},
+    {"id": "R2.25", "requirement": "public browser and release claims match observed evidence only", "status": "NOT_RUN"}
+  ]
+}

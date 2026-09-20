@@ -1,0 +1,42 @@
+{
+  "schema": "cvrs.h2.qualification-matrix.v1",
+  "candidate_version": "0.7.1a3",
+  "status": "H2_ALPHA_CANDIDATE_READY",
+  "allowed_dispositions": ["PASS", "FAIL_CVRS", "FAIL_FIDELITY", "FAIL_NATIVE_RUNTIME_COMPATIBILITY", "BLOCKED_EXTERNAL", "OUT_OF_SCOPE"],
+  "references": [
+    {
+      "id": "CVRS_REFERENCE_001",
+      "title": "Desert Vehicle Sim2Real / legacy MMDetection",
+      "summary": "Legacy real Sim2Real research: archival reconstruction, production inference, optimizer/checkpoint lineage, portable reproduction, and preserved geometry failures.",
+      "source": "docs/reference-cases/CVRS_REFERENCE_001_DESERTSYNTH.md"
+    },
+    {
+      "id": "CVRS_REFERENCE_002",
+      "title": "Cross-generation modern CV workflow",
+      "summary": "OpenMMLab generations, geospatial input, SDK interchange, deployment fidelity, grounded detection, feature artifacts, native-runtime failures, and external-access blockers.",
+      "source": "qualification/FINAL_REPORT.md"
+    }
+  ],
+  "lanes": [
+    {"reference":"CVRS_REFERENCE_001","lane":"Campaign A — archival reconstruction","disposition":"PASS","implementation":"COMPLETE_WITH_LIMITATIONS","native_execution":"HISTORICAL_EVIDENCE_INGESTED","artifact_fidelity":"PASS","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"docs/reference-cases/CVRS_REFERENCE_001_DESERTSYNTH.md"},
+    {"reference":"CVRS_REFERENCE_001","lane":"Campaign B — production/read-only interoperability","disposition":"FAIL_CVRS","implementation":"PASS","native_execution":"PASS","artifact_fidelity":"FAIL_CANONICAL_GEOMETRY_BOUNDS","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"docs/reference-cases/CVRS_REFERENCE_001_DESERTSYNTH.md"},
+    {"reference":"CVRS_REFERENCE_001","lane":"Campaign C — optimizer/checkpoint lineage","disposition":"PASS","implementation":"PASS","native_execution":"PASS_QUALIFICATION_ONLY","artifact_fidelity":"PASS","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"docs/reference-cases/CVRS_REFERENCE_001_DESERTSYNTH.md"},
+    {"reference":"CVRS_REFERENCE_001","lane":"Campaign D — evaluator/reproduction","disposition":"FAIL_CVRS","implementation":"PASS","native_execution":"PASS","artifact_fidelity":"FAIL_CANONICAL_GEOMETRY_BOUNDS","evaluator_or_deployment":"FAIL_CVRS_EVALUATOR","portable_evidence":"PASS","evidence":"docs/reference-cases/CVRS_REFERENCE_001_DESERTSYNTH.md"},
+    {"reference":"CVRS_REFERENCE_001","lane":"Campaign E — independent portable verification","disposition":"PASS","implementation":"PASS","native_execution":"OUT_OF_SCOPE","artifact_fidelity":"PASS","evaluator_or_deployment":"PASS_PORTABLE_REPRODUCTION","portable_evidence":"PASS","evidence":"docs/reference-cases/CVRS_REFERENCE_001_DESERTSYNTH.md"},
+    {"reference":"CVRS_REFERENCE_002","lane":"TorchGeo public GeoTIFF","disposition":"PASS","implementation":"PASS","native_execution":"PASS","artifact_fidelity":"PASS_LINEAGE","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"qualification/evidence/torchgeo-public-geotiff-2026-09-20/qualification-attempt-04/report.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"Supervision HBB interchange","disposition":"PASS","implementation":"PASS","native_execution":"PASS","artifact_fidelity":"PASS_223_OBJECTS","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"qualification/evidence/cvrs-sdk-paths-2026-09-20/report.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"FiftyOne HBB interchange","disposition":"PASS","implementation":"PASS","native_execution":"PASS","artifact_fidelity":"PASS_223_OBJECTS","evaluator_or_deployment":"OUT_OF_SCOPE_MASK_FIDELITY","portable_evidence":"PASS","evidence":"qualification/evidence/cvrs-sdk-paths-2026-09-20/report.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"MMDetection 2.28.2 / RetinaNet","disposition":"PASS","implementation":"PASS","native_execution":"PASS_106_DETECTIONS","artifact_fidelity":"PASS_106_OF_106","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"qualification/evidence/mmdet2-retinanet-2026-09-20/qualification-attempt-02/report.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"MMDetection 3.3 / RTMDet","disposition":"FAIL_CVRS","implementation":"PASS","native_execution":"PASS_600_DETECTIONS","artifact_fidelity":"FAIL_CVRS_95_OUT_OF_BOUNDS","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS_FAILURE_PRESERVED","evidence":"qualification/evidence/mmdet3-rtmdet-tiny-2026-09-20/qualification-attempt-01/report.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"MMRotate 0.3.4 / Oriented R-CNN","disposition":"PASS","implementation":"PASS","native_execution":"PASS_115_DETECTIONS","artifact_fidelity":"PASS_ORIENTED_CONTRACT","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"qualification/evidence/mmrotate034-oriented-rcnn-2026-09-20/final-disposition.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"MMSegmentation 1.2.2 / FCN-R50","disposition":"PASS","implementation":"PASS","native_execution":"PASS","artifact_fidelity":"PASS_3145728_VALUES","evaluator_or_deployment":"OUT_OF_SCOPE_NO_GROUND_TRUTH","portable_evidence":"PASS","evidence":"qualification/evidence/mmseg122-fcn-ade20k-2026-09-20/final-disposition.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"MMDeploy 1.3.1 / ONNX Runtime","disposition":"FAIL_FIDELITY","implementation":"PASS_EXPORT_AND_ORT","native_execution":"PASS_CPU_ORT","artifact_fidelity":"FAIL_NATIVE_PARITY_AND_BOUNDS","evaluator_or_deployment":"FAIL_DEPLOYMENT_FIDELITY","portable_evidence":"PASS_FAILURE_PRESERVED","evidence":"qualification/evidence/mmdeploy131-rtmdet-ort-2026-09-20/final-disposition.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"Ultralytics YOLO26n native","disposition":"PASS","implementation":"PASS","native_execution":"PASS_304_DETECTIONS","artifact_fidelity":"PASS_304_OF_304","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"qualification/evidence/ultralytics-yolo26n-2026-09-20/final-disposition.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"Ultralytics YOLO26n ONNX","disposition":"FAIL_FIDELITY","implementation":"PASS_EXPORT_AND_ORT","native_execution":"PASS_CPU_ORT","artifact_fidelity":"FAIL_304_NATIVE_VS_305_ORT","evaluator_or_deployment":"FAIL_DEPLOYMENT_FIDELITY","portable_evidence":"PASS_FAILURE_PRESERVED","evidence":"qualification/evidence/ultralytics-yolo26n-2026-09-20/final-disposition.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"Grounding DINO tiny","disposition":"PASS","implementation":"PASS","native_execution":"PASS_15_DETECTIONS","artifact_fidelity":"PASS_NATIVE_CVRS_WRAPPED","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS","evidence":"qualification/evidence/grounding-dino-tiny-2026-09-20/final-disposition.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"DINOv2 ViT-S/14 fallback","disposition":"PASS","implementation":"PASS_FALLBACK_ONLY","native_execution":"PASS","artifact_fidelity":"PASS_GLOBAL_DENSE_RELOAD","evaluator_or_deployment":"PASS_TWO_IMAGE_RETRIEVAL_SMOKE","portable_evidence":"PASS","evidence":"qualification/evidence/dinov2-public-2026-09-20/final-disposition.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"SAM 2.1 Hiera Tiny fallback","disposition":"FAIL_NATIVE_RUNTIME_COMPATIBILITY","implementation":"PASS_FALLBACK_ONLY","native_execution":"FAIL_NATIVE_POSTPROCESS_AFTER_GPU_FORWARD","artifact_fidelity":"NOT_PRODUCED","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS_FAILURE_PRESERVED","evidence":"qualification/evidence/sam21-public-2026-09-20/final-disposition.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"SAM 3 intended lane","disposition":"BLOCKED_EXTERNAL","implementation":"PINNED_NOT_ACQUIRED","native_execution":"BLOCKED_EXTERNAL_ACCESS","artifact_fidelity":"NOT_RUN","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS_BLOCKER_PRESERVED","evidence":"qualification/approvals/modern-foundation-models-2026-09-20.json"},
+    {"reference":"CVRS_REFERENCE_002","lane":"DINOv3 intended lane","disposition":"BLOCKED_EXTERNAL","implementation":"PINNED_NOT_ACQUIRED","native_execution":"BLOCKED_EXTERNAL_ACCESS","artifact_fidelity":"NOT_RUN","evaluator_or_deployment":"OUT_OF_SCOPE","portable_evidence":"PASS_BLOCKER_PRESERVED","evidence":"qualification/approvals/modern-foundation-models-2026-09-20.json"}
+  ]
+}

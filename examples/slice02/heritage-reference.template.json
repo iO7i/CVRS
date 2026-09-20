@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "upstream": "open-mmlab/mmdetection",
+  "revision": "REPLACE_WITH_EXACT_GIT_SHA",
+  "framework_version": "REPLACE_WITH_OBSERVED_VERSION",
+  "config": "path/to/config.py",
+  "config_sha256": "REPLACE_WITH_64_HEX_SHA256",
+  "resolved_config_sha256": null,
+  "config_graph_sha256": null,
+  "checkpoint": null,
+  "dataset_sha256": null,
+  "taxonomy": [],
+  "environment_reference": "path/to/environment-capsule.json",
+  "trust_executable_config": true,
+  "licenses": {
+    "schema_version": "1.0",
+    "code": "Apache-2.0",
+    "weights": "unknown",
+    "data": "unknown",
+    "annotations": "unknown",
+    "redistribution": "unknown",
+    "notes": "Track these independently."
+  },
+  "reference_dataset": null,
+  "reference_protocol": {},
+  "reported_metrics": {},
+  "status": "REFERENCE_RECORDED",
+  "compatibility_level": "H0_CATALOGUED",
+  "evidence": {}
+}

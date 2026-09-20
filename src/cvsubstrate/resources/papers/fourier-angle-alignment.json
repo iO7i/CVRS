@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "fourier-angle-alignment",
+  "title": "Fourier Angle Alignment for Oriented Object Detection in Remote Sensing",
+  "source_urls": [
+    "https://github.com/gcy0423/Fourier-Angle-Alignment"
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/gcy0423/Fourier-Angle-Alignment",
+      "revision": null
+    }
+  ],
+  "frameworks": [
+    "mmrotate",
+    "mmdetection",
+    "pytorch"
+  ],
+  "tasks": [
+    "obb_detection"
+  ],
+  "assets": [
+    {
+      "id": "weights",
+      "kind": "weights",
+      "license_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "dataset",
+      "kind": "dataset",
+      "license_status": "REVIEW_REQUIRED"
+    }
+  ],
+  "commands": {},
+  "integration_boundary": "whole_environment",
+  "status": "SOURCE_INSPECTED",
+  "verified_revision": null,
+  "inspected_date": "2026-09-19",
+  "limitations": [
+    "Source identifies MMRotate/LSKNet heritage. Bind the actual local config, checkpoint and official evaluation settings.",
+    "No guessed command or model-zoo metric is supplied."
+  ]
+}

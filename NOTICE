@@ -1,0 +1,12 @@
+CV Research Substrate
+Copyright 2026 Hosam Talbi
+
+OpenMMLab, MMDetection, PyTorch, torchvision, COCO, and other project names identify
+their respective third-party projects. This repository is not their official
+continuation and does not claim their endorsement.
+
+The native worker imports torchvision Faster R-CNN rather than copying its model
+implementation. The optional COCO adapter imports pycocotools. Legacy inference
+imports the selected MMDetection/OneDL installation. Upstream notices and licenses
+remain with those packages. No research paper, external dataset, or external
+checkpoint is represented as work by this repository's owner.

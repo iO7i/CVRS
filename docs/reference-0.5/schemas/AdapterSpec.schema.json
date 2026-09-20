@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"config":{"additionalProperties":true,"title":"Config","type":"object"},"name":{"default":"native_torch","enum":["native_torch","mmdetection","external","ultralytics","rfdetr"],"title":"Name","type":"string"},"schema_version":{"const":"1.0","default":"1.0","title":"Schema Version","type":"string"}},"title":"AdapterSpec","type":"object"}

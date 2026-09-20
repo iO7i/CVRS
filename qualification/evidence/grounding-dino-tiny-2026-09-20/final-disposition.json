@@ -1,0 +1,15 @@
+{
+  "schema": "cvrs.rq002.final-disposition.v1",
+  "lane": "GROUNDING",
+  "status": "PASS_GROUNDING_DINO_NATIVE_CVRS_AND_WRAPPED",
+  "successful_run_id": "ap-qmgxEUq7Ag6JAOEH5NXGdr",
+  "report": "qualification/evidence/grounding-dino-tiny-2026-09-20/qualification-attempt-02/report.json",
+  "native_detections": 15,
+  "canonical_detections": 15,
+  "wrapped_detections": 15,
+  "out_of_bounds": 0,
+  "geometry_modification": "NONE",
+  "prompt_tuning": false,
+  "attempt_01_preserved": "INFRASTRUCTURE_FAIL_AFTER_NATIVE_INFERENCE_ARTIFACTS_NOT_RETURNED",
+  "cost_usd_all_grounding_attempts": 0.01417588
+}

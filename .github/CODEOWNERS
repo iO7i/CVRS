@@ -1,0 +1,4 @@
+# Owner configures real GitHub maintainers before release.
+# /src/cvsubstrate/contracts/ @actual-maintainer
+# /src/cvsubstrate/worker_shims/ @actual-maintainer
+# /src/cvsubstrate/research/ @actual-maintainer
